@@ -1,94 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLA Classroom</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>COLA Classroom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="background-circle circle1"></div>
-<div class="background-circle circle2"></div>
-
 <div class="container">
 
-<div class="header">
+    <div class="header">
 
-<img
-class="logo"
-src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
-alt="COLA Logo">
+        <img class="logo"
+             src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
+             alt="COLA Logo">
 
-<h1>
+        <h1>
+            Welcome to
+            <br>
+            <span>the Classroom</span>
+        </h1>
 
-Welcome to
-<br>
+        <p>Assoc. Prof. Dr. Vissanu Zumitzavan</p>
 
-<span>the Classroom</span>
+    </div>
 
-</h1>
+    <div class="course-card">
 
-<p>
+        <h2>กรุณาเลือกรายวิชา</h2>
 
-Assoc. Prof. Dr. Vissanu Zumitzavan
+        <button onclick="location.href='human.html'">
 
-</p>
+            <div class="course-code">CL303353</div>
 
-</div>
+            <div class="course-name">
+                การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
+            </div>
 
-<div class="course-card">
+        </button>
 
-<h2>📚 กรุณาเลือกรายวิชา</h2>
+        <button class="orange"
+                onclick="location.href='analysis.html'">
 
-<button onclick="location.href='human.html'">
+            <div class="course-code">CL304372</div>
 
-<div class="course-code">
+            <div class="course-name">
+                การวิเคราะห์ข้อมูลทางกิจการสาธารณะ
+            </div>
 
-CL303353
+        </button>
 
-</div>
-
-<div class="course-name">
-
-การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
-
-</div>
-
-</button>
-
-<button class="orange"
-onclick="location.href='analysis.html'">
-
-<div class="course-code">
-
-CL304372
+    </div>
 
 </div>
 
-<div class="course-name">
-
-การวิเคราะห์ข้อมูลทางกิจการสาธารณะ
-
-</div>
-
-</button>
-
-</div>
-
-</div>
+<script src="script.js"></script>
 
 </body>
-
 </html>
