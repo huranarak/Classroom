@@ -285,38 +285,74 @@ a:active{
 
     .container{
 
-        padding:24px 18px;
+        max-width:100%;
+        width:100%;
+
+        padding:24px;
 
     }
 
     .logo{
 
-        width:150px;
+        width:170px;
 
-        margin-bottom:200px;
+        margin-bottom:120px;
 
     }
 
     h1{
 
-        font-size:34px;
+        font-size:48px;
 
-        line-height:40px;
+        line-height:52px;
+
+        font-weight:700;
 
     }
 
     h1 span{
 
-        font-size:34px;
+        font-size:48px;
 
-        line-height:40px;
+        line-height:52px;
+
+        font-weight:700;
+
+    }
+
+    .header p{
+
+        font-size:18px;
 
     }
 
     .course-card{
 
-        width:100%;
-        max-width:360px;
+        width:95%;
+
+        max-width:none;
+
+        margin-top:40px;
+
+        padding:18px;
+
+    }
+
+    .course-card h2{
+
+        font-size:24px;
+
+    }
+
+    .course-code{
+
+        font-size:22px;
+
+    }
+
+    .course-name{
+
+        font-size:14px;
 
     }
 
