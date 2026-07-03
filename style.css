@@ -1,51 +1,43 @@
+/* =========================================
+   RESET
+========================================= */
+
 *{
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
     font-family:'Poppins',sans-serif;
-
 }
 
-/* ====================================
-
+/* =========================================
    BODY
-
-==================================== */
+========================================= */
 
 body{
 
     background:#F8F6F0;
 
-    color:#000;
+    display:flex;
+    justify-content:center;
 
     min-height:100vh;
 
-    display:flex;
-
-    justify-content:center;
+    color:#000;
 
 }
 
-/* ====================================
-
+/* =========================================
    CONTAINER
-
-==================================== */
+========================================= */
 
 .container{
 
     width:100%;
-
-    max-width:430px;
+    max-width:420px;
 
     min-height:100vh;
 
     display:flex;
-
     flex-direction:column;
 
     align-items:center;
@@ -54,11 +46,9 @@ body{
 
 }
 
-/* ====================================
-
+/* =========================================
    HEADER
-
-==================================== */
+========================================= */
 
 .header{
 
@@ -68,121 +58,105 @@ body{
 
 }
 
-/* ====================================
-
+/* =========================================
    LOGO
-
-==================================== */
+========================================= */
 
 .logo{
 
-    width:170px;
+    width:165px;
 
     display:block;
 
-    margin:0 auto;
+    margin:auto;
 
 }
 
-/* ====================================
-
+/* =========================================
    WELCOME
-
-==================================== */
+========================================= */
 
 h1{
 
-    margin-top:55px;
+    margin-top:180px;
 
-    font-size:37px;
+    font-size:38px;
 
-    line-height:44px;
-
-    font-weight:600;
-
-    color:#000;
-
-    text-align:center;
-
-}
-
-h1 span{
-
-    font-size:37px;
-
-    line-height:44px;
-
-    font-weight:600;
-
-    color:#000;
-
-}
-
-/* ====================================
-
-   TEACHER
-
-==================================== */
-
-.header p{
-
-    margin-top:14px;
-
-    font-size:15px;
-
-    font-weight:400;
-
-    color:#666;
-
-}
-
-/* ====================================
-
-   COURSE CARD
-
-==================================== */
-
-.course-card{
-
-    width:325px;
-
-    margin-top:70px;
-
-    background:#FFFFFF;
-
-    border-radius:22px;
-
-    padding:16px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-}
-
-/* ====================================
-
-   CARD TITLE
-
-==================================== */
-
-.course-card h2{
-
-    text-align:center;
-
-    font-size:22px;
+    line-height:40px;
 
     font-weight:700;
 
     color:#000;
 
-    margin-bottom:14px;
+}
+
+h1 span{
+
+    font-size:38px;
+
+    line-height:40px;
+
+    font-weight:700;
+
+    color:#000;
 
 }
 
-/* ====================================
+/* =========================================
+   TEACHER
+========================================= */
 
+.header p{
+
+    margin-top:12px;
+
+    font-size:15px;
+
+    color:#666;
+
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.course-card{
+
+    width:300px;
+
+    margin-top:60px;
+
+    background:#FFFFFF;
+
+    border-radius:20px;
+
+    padding:14px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.course-card h2{
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#000;
+
+    margin-bottom:12px;
+
+}
+
+/* =========================================
    BUTTON
-
-==================================== */
+========================================= */
 
 button{
 
@@ -190,19 +164,25 @@ button{
 
     border:none;
 
-    border-radius:14px;
+    border-radius:12px;
 
-    background:#FFD34A;
+    background:#FFD54D;
 
-    padding:11px 14px;
+    padding:10px;
 
     margin-top:8px;
 
     cursor:pointer;
 
-    transition:0.25s;
+    transition:.25s;
 
     color:#000;
+
+}
+
+.orange{
+
+    background:#FF9445;
 
 }
 
@@ -210,33 +190,24 @@ button:hover{
 
     transform:translateY(-2px);
 
-    box-shadow:0 8px 18px rgba(0,0,0,.12);
-
 }
 
-.orange{
-
-    background:#FF964A;
-
-}
-
-/* ====================================
-
-   TEXT IN BUTTON
-
-==================================== */
+/* Safari Fix */
 
 button,
-
 button *{
 
     color:#000 !important;
 
 }
 
+/* =========================================
+   COURSE CODE
+========================================= */
+
 .course-code{
 
-    font-size:21px;
+    font-size:19px;
 
     font-weight:700;
 
@@ -246,9 +217,13 @@ button *{
 
 }
 
+/* =========================================
+   COURSE NAME
+========================================= */
+
 .course-name{
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:500;
 
@@ -256,63 +231,39 @@ button *{
 
 }
 
-/* ====================================
-
+/* =========================================
    FOOTER
-
-==================================== */
+========================================= */
 
 .footer{
 
-    margin-top:18px;
+    margin-top:16px;
 
     text-align:center;
 
-    font-size:14px;
+    font-size:13px;
 
     color:#777;
 
 }
 
-/* ====================================
-
-   LINK FIX
-
-==================================== */
+/* =========================================
+   LINK
+========================================= */
 
 a{
 
+    color:inherit;
+
     text-decoration:none;
 
-    color:inherit;
-
 }
 
-a:visited{
-
-    color:inherit;
-
-}
-
-a:hover{
-
-    color:inherit;
-
-}
-
-a:active{
-
-    color:inherit;
-
-}
-
-/* ====================================
-
+/* =========================================
    MOBILE
+========================================= */
 
-==================================== */
-
-@media (max-width:480px){
+@media(max-width:480px){
 
     .container{
 
@@ -322,7 +273,7 @@ a:active{
 
     .logo{
 
-        width:150px;
+        width:145px;
 
     }
 
@@ -330,7 +281,7 @@ a:active{
 
         font-size:33px;
 
-        line-height:38px;
+        line-height:37px;
 
     }
 
@@ -338,13 +289,13 @@ a:active{
 
         font-size:33px;
 
-        line-height:38px;
+        line-height:37px;
 
     }
 
     .course-card{
 
-        width:100%;
+        width:240px;
 
     }
 
