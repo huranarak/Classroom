@@ -1,258 +1,309 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
 }
+
+/* ===========================
+
+   BODY
+
+=========================== */
 
 body{
 
-background:#F7F5EF;
+    background:#F8F6F0;
 
-overflow:hidden;
+    display:flex;
 
-display:flex;
+    justify-content:center;
 
-justify-content:center;
+    align-items:center;
 
-}
+    min-height:100vh;
 
-/* วงกลมพื้นหลัง */
-
-.background-circle{
-
-position:fixed;
-
-border-radius:50%;
-
-z-index:-1;
-
-filter:blur(5px);
+    color:#222;
 
 }
 
-.circle1{
+/* ===========================
 
-width:300px;
+   CONTAINER
 
-height:300px;
-
-background:#DCEAD8;
-
-top:-120px;
-
-left:-120px;
-
-opacity:.7;
-
-}
-
-.circle2{
-
-width:250px;
-
-height:250px;
-
-background:#FFF0C9;
-
-right:-100px;
-
-bottom:-80px;
-
-opacity:.8;
-
-}
+=========================== */
 
 .container{
 
-width:100%;
+    width:100%;
 
-max-width:430px;
+    max-width:430px;
 
-min-height:100vh;
+    min-height:100vh;
 
-display:flex;
+    display:flex;
 
-flex-direction:column;
+    flex-direction:column;
 
-padding:35px 22px;
+    padding:28px 22px;
 
 }
+
+/* ===========================
+
+   HEADER
+
+=========================== */
 
 .header{
 
-text-align:center;
+    text-align:center;
 
 }
+
+/* ===========================
+
+   LOGO
+
+=========================== */
 
 .logo{
 
-width:165px;
+    width:170px;
 
-margin:auto;
+    display:block;
 
-display:block;
-
-margin-bottom:20px;
+    margin:0 auto;
 
 }
 
+/* ===========================
+
+   WELCOME
+
+=========================== */
+
 h1{
 
-font-size:40px;
-font-weight:700;
-line-height:44px;
-color:#1F1F1F;
+    margin-top:32px;
 
-margin-top:28px;
+    font-size:38px;
+
+    line-height:43px;
+
+    font-weight:700;
+
+    color:#222;
 
 }
 
 h1 span{
 
-font-size:46px;
+    font-size:45px;
 
-font-weight:900;
+    font-weight:900;
 
-color:#1F1F1F;
+    color:#2C4C36;
+
+}
+
+/* ===========================
+
+   TEACHER
+
+=========================== */
+
+.header p{
+
+    margin-top:15px;
+
+    font-size:17px;
+
+    color:#666;
+
+    font-weight:400;
 
 }
 
-p{
+/* ===========================
 
-margin-top:14px;
+   COURSE CARD
 
-font-size:18px;
-
-color:#666;
-
-font-weight:400;
-
-}
+=========================== */
 
 .course-card{
 
-margin-top:auto;
+    margin-top:auto;
 
-background:#FFFFFF;
+    margin-bottom:55px;
 
-border-radius:30px;
+    background:#FFFFFF;
 
-padding:22px;
+    border-radius:26px;
 
-margin-bottom:55px;
+    padding:20px;
 
-box-shadow:
+    box-shadow:
 
-0 10px 30px rgba(0,0,0,.08),
-
-0 2px 6px rgba(0,0,0,.04);
-
-backdrop-filter:blur(20px);
+        0 10px 30px rgba(0,0,0,.08);
 
 }
+
+/* ===========================
+
+   TITLE
+
+=========================== */
 
 .course-card h2{
 
-font-size:26px;
-font-weight:800;
-color:#2B4732;
+    text-align:center;
 
-margin-bottom:20px;
+    font-size:28px;
 
-text-align:center;
+    font-weight:800;
 
+    color:#2C4C36;
+
+    margin-bottom:18px;
 
 }
+
+/* ===========================
+
+   BUTTON
+
+=========================== */
 
 button{
 
-width:100%;
+    width:100%;
 
-border:none;
+    border:none;
 
-padding:16px;
+    border-radius:16px;
 
-border-radius:16px;
+    padding:12px 16px;
 
-margin-top:14px;
+    margin-top:10px;
 
-cursor:pointer;
+    cursor:pointer;
 
-transition:.3s;
+    transition:.25s;
 
 }
+
+/* Hover */
 
 button:hover{
 
-transform:translateY(-3px);
+    transform:translateY(-2px);
 
-box-shadow:0 12px 25px rgba(0,0,0,.15);
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
 
 }
 
+/* สีปุ่ม */
+
 button:first-of-type{
 
-background:#FFD447;
+    background:#FFD34A;
 
 }
 
 .orange{
 
-background:#FF9645;
+    background:#FF974A;
 
 }
+
+/* ===========================
+
+   COURSE CODE
+
+=========================== */
 
 .course-code{
 
-font-size:26px;
-font-weight:800;
-color:#222;
+    font-size:24px;
 
-line-height:1.1;
+    font-weight:800;
 
-margin-bottom:2px;
+    color:#222;
+
+    line-height:1.05;
+
+    margin-bottom:2px;
 
 }
+
+/* ===========================
+
+   COURSE NAME
+
+=========================== */
 
 .course-name{
 
-font-size:15px;
-font-weight:500;
-color:#333;
+    font-size:14px;
 
-margin-top:0;
+    font-weight:500;
 
-line-height:1.15;
+    color:#333;
 
-}
-
-@media(max-width:480px){
-
-.logo{
-
-width:145px;
+    line-height:1.15;
 
 }
 
-h1{
+/* ===========================
 
-font-size:36px;
+   RESPONSIVE
 
-line-height:40px;
+=========================== */
 
-}
+@media (max-width:480px){
 
-h1 span{
+    .container{
 
-font-size:42px;
+        padding:24px 18px;
 
-}
+    }
 
-.course-card{
+    .logo{
 
-margin-bottom:35px;
+        width:145px;
 
-}
+    }
+
+    h1{
+
+        font-size:34px;
+
+        line-height:38px;
+
+    }
+
+    h1 span{
+
+        font-size:40px;
+
+    }
+
+    .course-card{
+
+        margin-bottom:35px;
+
+    }
+
+    .course-card h2{
+
+        font-size:24px;
+
+    }
 
 }
