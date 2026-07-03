@@ -78,13 +78,13 @@ body{
 
 h1{
 
-    margin-top:180px;
+    margin-top:220px;
 
-    font-size:38px;
+    font-size:40px;
 
     line-height:40px;
 
-    font-weight:700;
+    font-weight:800;
 
     color:#000;
 
@@ -92,11 +92,11 @@ h1{
 
 h1 span{
 
-    font-size:38px;
+    font-size:40px;
 
     line-height:40px;
 
-    font-weight:700;
+    font-weight:800;
 
     color:#000;
 
@@ -146,7 +146,7 @@ h1 span{
 
     font-size:20px;
 
-    font-weight:700;
+    font-weight:600;
 
     color:#000;
 
@@ -168,7 +168,7 @@ button{
 
     background:#FFD54D;
 
-    padding:10px;
+    padding:12px;
 
     margin-top:8px;
 
@@ -209,7 +209,7 @@ button *{
 
     font-size:19px;
 
-    font-weight:700;
+    font-weight:600;
 
     line-height:1;
 
