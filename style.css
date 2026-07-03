@@ -24,8 +24,6 @@ body{
 
     justify-content:center;
 
-    align-items:center;
-
     min-height:100vh;
 
     color:#222;
@@ -50,7 +48,9 @@ body{
 
     flex-direction:column;
 
-    padding:28px 22px;
+    align-items:center;
+
+    padding:28px 20px;
 
 }
 
@@ -90,25 +90,25 @@ body{
 
 h1{
 
-    margin-top:130px;
+    margin-top:30px;
 
-    font-size:38px;
+    font-size:36px;
 
-    line-height:43px;
+    line-height:40px;
 
     font-weight:700;
 
-    color:#000000;
+    color:#000;
 
 }
 
 h1 span{
 
-    font-size:45px;
+    font-size:43px;
 
-    font-weight:700;
+    font-weight:900;
 
-    color:#000000;
+    color:#000;
 
 }
 
@@ -120,9 +120,9 @@ h1 span{
 
 .header p{
 
-    margin-top:20px;
+    margin-top:12px;
 
-    font-size:18px;
+    font-size:16px;
 
     color:#666;
 
@@ -138,19 +138,17 @@ h1 span{
 
 .course-card{
 
-    margin-top:auto;
+    width:340px;
 
-    margin-bottom:100px;
+    margin-top:70px;
 
-    background:#FFFFFF;
+    background:#fff;
 
-    border-radius:26px;
+    border-radius:24px;
 
-    padding:20px;
+    padding:18px;
 
-    box-shadow:
-
-        0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
 }
 
@@ -164,13 +162,13 @@ h1 span{
 
     text-align:center;
 
-    font-size:28px;
+    font-size:26px;
 
     font-weight:800;
 
-    color:#222;
+    color:#2C4C36;
 
-    margin-bottom:18px;
+    margin-bottom:15px;
 
 }
 
@@ -186,9 +184,9 @@ button{
 
     border:none;
 
-    border-radius:16px;
+    border-radius:15px;
 
-    padding:12px 16px;
+    padding:12px;
 
     margin-top:10px;
 
@@ -198,17 +196,11 @@ button{
 
 }
 
-/* Hover */
-
 button:hover{
 
     transform:translateY(-2px);
 
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
-
 }
-
-/* สีปุ่ม */
 
 button:first-of-type{
 
@@ -218,7 +210,7 @@ button:first-of-type{
 
 .orange{
 
-    background:#FF974A;
+    background:#FF964A;
 
 }
 
@@ -234,9 +226,7 @@ button:first-of-type{
 
     font-weight:800;
 
-    color:#222;
-
-    line-height:1.05;
+    line-height:1;
 
     margin-bottom:2px;
 
@@ -254,9 +244,25 @@ button:first-of-type{
 
     font-weight:500;
 
-    color:#333;
+    line-height:1.1;
 
-    line-height:1.15;
+}
+
+/* ===========================
+
+   FOOTER
+
+=========================== */
+
+.footer{
+
+    margin-top:22px;
+
+    font-size:14px;
+
+    color:#777;
+
+    text-align:center;
 
 }
 
@@ -268,12 +274,6 @@ button:first-of-type{
 
 @media (max-width:480px){
 
-    .container{
-
-        padding:24px 18px;
-
-    }
-
     .logo{
 
         width:145px;
@@ -282,27 +282,21 @@ button:first-of-type{
 
     h1{
 
-        font-size:34px;
+        font-size:32px;
 
-        line-height:38px;
+        line-height:36px;
 
     }
 
     h1 span{
 
-        font-size:40px;
+        font-size:38px;
 
     }
 
     .course-card{
 
-        margin-bottom:35px;
-
-    }
-
-    .course-card h2{
-
-        font-size:24px;
+        width:100%;
 
     }
 
