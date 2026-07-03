@@ -99,23 +99,22 @@ margin-bottom:20px;
 
 h1{
 
-font-size:42px;
-
+font-size:40px;
 font-weight:700;
-
-line-height:48px;
-
+line-height:44px;
 color:#1F1F1F;
+
+margin-top:28px;
 
 }
 
 h1 span{
 
-font-size:50px;
+font-size:46px;
 
 font-weight:900;
 
-color:#2B4732;
+color:#1F1F1F;
 
 }
 
@@ -155,13 +154,14 @@ backdrop-filter:blur(20px);
 
 .course-card h2{
 
-font-size:20px;
-
-margin-bottom:18px;
-
+font-size:26px;
+font-weight:800;
 color:#2B4732;
 
-font-weight:700;
+margin-bottom:20px;
+
+text-align:center;
+
 
 }
 
@@ -206,22 +206,24 @@ background:#FF9645;
 .course-code{
 
 font-size:26px;
-
 font-weight:800;
-
 color:#222;
+
+line-height:1.1;
+
+margin-bottom:2px;
 
 }
 
 .course-name{
 
 font-size:15px;
-
-margin-top:4px;
-
 font-weight:500;
-
 color:#333;
+
+margin-top:0;
+
+line-height:1.15;
 
 }
 
