@@ -78,9 +78,9 @@ body{
 
 h1{
 
-    margin-top:220px;
+    margin-top:200px;
 
-    font-size:40px;
+    font-size:50px;
 
     line-height:40px;
 
@@ -94,7 +94,7 @@ h1 span{
 
     font-size:40px;
 
-    line-height:40px;
+    line-height:50px;
 
     font-weight:800;
 
@@ -122,7 +122,7 @@ h1 span{
 
 .course-card{
 
-    width:300px;
+    width:400px;
 
     margin-top:60px;
 
@@ -263,7 +263,7 @@ a{
    MOBILE
 ========================================= */
 
-@media(max-width:480px){
+@media(max-width:460px){
 
     .container{
 
