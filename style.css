@@ -364,11 +364,11 @@ a:active{
 
 .human-header{
     text-align:center;
-    margin:30px 0;
+    margin:20px 0;
 }
 
 .human-header .logo{
-    width:220px;
+    width:170px;
     height:auto;
 }
 
@@ -384,9 +384,9 @@ a:active{
 
     gap:24px;
 
-    max-width:700px;
+    max-width:600px;
 
-    margin:35px auto;
+    margin:25px auto;
 
 }
 
@@ -398,9 +398,9 @@ a:active{
 
 .teacher-photo img{
 
-    width:120px;
+    width:220px;
 
-    height:155px;
+    height:auto;
 
     border-radius:12px;
 
@@ -430,9 +430,9 @@ a:active{
 
 .welcome-title{
 
-    margin:0;
+    margin-left:5px;
 
-    font-size:42px;
+    font-size:56px;
 
     line-height:1.05;
 
@@ -464,9 +464,9 @@ a:active{
 
     margin:0;
 
-    font-size:54px;
+    font-size:52px;
 
-    font-weight:800;
+    font-weight:600;
 
     color:#111;
 
@@ -474,7 +474,7 @@ a:active{
 
 .subject-name{
 
-    margin-top:8px;
+    margin-top:3px;
 
     font-size:19px;
 
@@ -508,7 +508,7 @@ a:active{
 
     border-radius:18px;
 
-    padding:24px;
+    padding:20px;
 
     margin-bottom:20px;
 
@@ -516,7 +516,7 @@ a:active{
 
     font-family:'Poppins',sans-serif;
 
-    font-size:28px;
+    font-size:22px;
 
     font-weight:700;
 
