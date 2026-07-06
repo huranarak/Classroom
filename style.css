@@ -358,86 +358,103 @@ a:active{
 
 }
 
-/* ===========================
+/* ==========================================
    HUMAN PAGE
-=========================== */
+========================================== */
 
 .teacher-section{
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
     align-items:center;
-    justify-content:center;
-    gap:20px;
 
-    margin:50px 0;
+    gap:22px;
 
-}
-
-.teacher-img{
-
-    width:135px;
-
-    border-radius:4px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    margin:30px 0;
 
 }
 
-.teacher-content{
+.teacher-photo{
+
+    width:100px;
+
+}
+
+.teacher-photo img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    display:block;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.teacher-detail{
 
     text-align:left;
 
 }
 
-.welcome-title{
+.teacher-detail h2{
 
-    font-size:18px;
+    margin:0;
+
+    font-size:30px;
+
+    line-height:1.15;
 
     font-weight:800;
 
-    color:#111;
-
-    line-height:1.2;
-
-    margin-bottom:5px;
+    color:#222;
 
 }
 
-.welcome-title span{
+.teacher-detail h2 span{
 
-    font-size:18px;
+    color:#f7941d;
 
 }
 
 .teacher-name{
 
-    font-size:10px;
+    margin:8px 0 16px;
 
     color:#777;
 
-    margin-bottom:10px;
+    font-size:13px;
 
 }
 
-.course-code{
+.teacher-detail h1{
 
-    font-size:32px;
+    margin:0;
+
+    font-size:36px;
 
     font-weight:800;
-
-    color:#111;
-
-    margin-bottom:4px;
-
-}
-
-.course-name{
-
-    font-size:15px;
 
     color:#222;
 
 }
+
+.subject-name{
+
+    margin-top:6px;
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+}
+
+/* ---------- MENU ---------- */
 
 .menu-btn{
 
@@ -449,19 +466,17 @@ a:active{
 
     padding:22px;
 
+    margin-bottom:18px;
+
+    cursor:pointer;
+
+    font-family:'Poppins',sans-serif;
+
     font-size:20px;
 
     font-weight:700;
 
-    color:#fff;
-
-    cursor:pointer;
-
-    margin-bottom:18px;
-
     transition:.25s;
-
-    font-family:'Poppins',sans-serif;
 
 }
 
@@ -473,81 +488,77 @@ a:active{
 
 .orange{
 
-    background:#ff7417;
+    background:#ff7a18;
+
+    color:white;
 
 }
 
 .yellow{
 
-    background:#ffc107;
+    background:#ffc928;
+
+    color:#222;
 
 }
 
 .gray{
 
-    background:#bdbdbd;
+    background:#e5e5e5;
 
-    color:#111;
-
-}
-
-.footer{
-
-    margin-top:20px;
-
-    text-align:center;
-
-    color:#555;
-
-    font-size:15px;
+    color:#222;
 
 }
 
-/* Mobile */
+/* ---------- MOBILE ---------- */
 
 @media(max-width:768px){
 
 .teacher-section{
 
+    grid-template-columns:70px 1fr;
+
     gap:15px;
 
-}
-
-.teacher-img{
-
-    width:130px;
+    margin:20px 0;
 
 }
 
-.welcome-title{
+.teacher-photo{
 
-    font-size:17px;
+    width:70px;
+
+}
+
+.teacher-detail h2{
+
+    font-size:20px;
 
 }
 
 .teacher-name{
 
-    font-size:9px;
+    font-size:10px;
 
 }
 
-.course-code{
+.teacher-detail h1{
 
-    font-size:28px;
+    font-size:24px;
 
 }
 
-.course-name{
+.subject-name{
 
-    font-size:14px;
+    font-size:13px;
 
 }
 
 .menu-btn{
 
-    font-size:18px;
+    padding:18px;
 
-    padding:20px;
+    font-size:17px;
 
 }
 
