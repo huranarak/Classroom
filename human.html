@@ -2,6 +2,7 @@
 <html lang="th">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,6 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
@@ -27,11 +29,15 @@
         alt="COLA Logo">
 
         <h1>
+
             📚 CL303353
+
         </h1>
 
         <p>
+
             การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
+
         </p>
 
     </div>
@@ -56,13 +62,13 @@
 
             <div class="input-group">
 
-                <label>รหัศนักศึกษา</label>
+                <label>รหัสนักศึกษา</label>
 
                 <input
                     type="text"
                     id="studentId"
-                    maxlength="11"
-                    placeholder="61xxxxxxx-x"
+                    maxlength="10"
+                    placeholder="653040xxxx"
                     required>
 
             </div>
@@ -74,7 +80,7 @@
                 <input
                     type="email"
                     id="email"
-                    placeholder="nuna@kkumail.com"
+                    placeholder="example@kkumail.com"
                     required>
 
             </div>
@@ -85,52 +91,47 @@
 
                 <select id="major" required>
 
-                    <option value="">
-                        -- เลือกสาขา --
-                    </option>
+                    <option value="">-- กรุณาเลือกสาขา --</option>
 
-                    <option value="GPA">
-                        GPA
-                    </option>
+                    <option value="GPA">GPA</option>
 
-                    <option value="FFM">
-                        FFM
-                    </option>
+                    <option value="FFM">FFM</option>
 
-                    <option value="UMT">
-                        UMT
-                    </option>
+                    <option value="UMT">UMT</option>
 
                 </select>
 
+            </div>
+
             <div class="location-box">
 
-    <span>📍 สถานะตำแหน่ง</span>
+                <label>📍 สถานะตำแหน่ง</label>
 
-    <p id="locationStatus" class="error">
+                <p id="locationStatus" class="location-red">
 
-        🔴 ยังไม่ได้อนุญาตการเข้าถึงตำแหน่ง
+                    🔴 ยังไม่ได้อนุญาตการเข้าถึงตำแหน่ง
 
-    </p>
+                </p>
 
-    <button
-        type="button"
-        id="locationBtn">
+                <button
+                    type="button"
+                    id="locationBtn"
+                    class="location-btn">
 
-        ตรวจสอบตำแหน่ง
+                    ตรวจสอบตำแหน่ง
 
-    </button>
+                </button>
 
-</div>
+            </div>
 
-<button
-    type="submit"
-    id="checkBtn"
-    disabled>
+            <button
+                type="submit"
+                id="checkBtn"
+                disabled>
 
-    บันทึกข้อมูล
+                💾 บันทึกข้อมูล
 
-</button>
+            </button>
 
         </form>
 
