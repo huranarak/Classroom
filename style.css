@@ -358,48 +358,57 @@ a:active{
 
 }
 
-/* =====================================================
+/* ===========================================
    HUMAN PAGE
-===================================================== */
+=========================================== */
 
 .human-header{
     text-align:center;
-    margin-bottom:25px;
+    margin:30px 0;
 }
 
 .human-header .logo{
-    width:170px;
+    width:220px;
     height:auto;
 }
+
+/* ---------- Teacher ---------- */
 
 .teacher-section{
 
     display:flex;
-    align-items:center;
-    gap:18px;
 
-    margin:25px 0 35px;
+    align-items:flex-start;
+
+    justify-content:center;
+
+    gap:24px;
+
+    max-width:700px;
+
+    margin:35px auto;
 
 }
 
 .teacher-photo{
 
-    flex:0 0 80px;
+    flex:0 0 120px;
 
 }
 
 .teacher-photo img{
 
-    width:80px;
-    height:100px;
+    width:120px;
+
+    height:155px;
+
+    border-radius:12px;
 
     object-fit:cover;
 
-    border-radius:8px;
-
     display:block;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 }
 
@@ -407,15 +416,25 @@ a:active{
 
     flex:1;
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    height:155px;
+
 }
 
-.teacher-detail h2{
+/* Welcome */
+
+.welcome-title{
 
     margin:0;
 
-    font-size:20px;
+    font-size:42px;
 
-    line-height:1.15;
+    line-height:1.05;
 
     font-weight:800;
 
@@ -423,27 +442,29 @@ a:active{
 
 }
 
-.teacher-detail h2 span{
-
-    color:#000;
-
-}
-
 .teacher-name{
 
-    margin:6px 0 12px;
+    margin-top:10px;
 
-    font-size:11px;
+    font-size:16px;
 
     color:#777;
 
 }
 
-.teacher-detail h1{
+/* Course */
+
+.course-block{
+
+    margin-top:auto;
+
+}
+
+.course-code{
 
     margin:0;
 
-    font-size:24px;
+    font-size:54px;
 
     font-weight:800;
 
@@ -453,29 +474,31 @@ a:active{
 
 .subject-name{
 
-    margin-top:4px;
+    margin-top:8px;
 
-    font-size:14px;
+    font-size:19px;
 
     color:#555;
 
 }
 
-/* ---------------- CARD ---------------- */
+/* ---------- Menu ---------- */
 
 .menu-card{
 
-    background:#fff;
+    max-width:650px;
 
-    border-radius:24px;
+    margin:40px auto;
+
+    background:#fff;
 
     padding:28px;
 
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    border-radius:28px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
 }
-
-/* ---------------- BUTTON ---------------- */
 
 .menu-btn{
 
@@ -483,19 +506,19 @@ a:active{
 
     border:none;
 
-    border-radius:16px;
+    border-radius:18px;
 
-    padding:20px;
+    padding:24px;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     cursor:pointer;
 
-    font-size:20px;
+    font-family:'Poppins',sans-serif;
+
+    font-size:28px;
 
     font-weight:700;
-
-    font-family:'Poppins',sans-serif;
 
     transition:.25s;
 
@@ -509,13 +532,13 @@ a:active{
 
 .menu-btn:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
 }
 
 .orange{
 
-    background:#ff7618;
+    background:#ff7318;
 
     color:white;
 
@@ -525,79 +548,95 @@ a:active{
 
     background:#ffc928;
 
-    color:white;
+    color:#222;
 
 }
 
 .gray{
 
-    background:#bfbfbf;
+    background:#c7c7c7;
 
-    color:#111;
+    color:#222;
 
 }
+
+/* ---------- Footer ---------- */
 
 .human-footer{
 
-    margin-top:22px;
-
     text-align:center;
+
+    margin:25px 0;
 
     color:#666;
 
-    font-size:15px;
+    font-size:18px;
 
 }
 
-/* =====================================================
+/* ===========================================
    MOBILE
-===================================================== */
+=========================================== */
 
 @media(max-width:768px){
+
+.human-header .logo{
+
+    width:150px;
+
+}
 
 .teacher-section{
 
     gap:14px;
 
-    margin:15px 0 25px;
+    margin:20px auto;
 
 }
 
 .teacher-photo{
 
-    flex:0 0 72px;
+    flex:0 0 95px;
 
 }
 
 .teacher-photo img{
 
-    width:72px;
+    width:95px;
 
-    height:90px;
-
-}
-
-.teacher-detail h2{
-
-    font-size:16px;
+    height:120px;
 
 }
 
-.teacher-name{
+.teacher-detail{
 
-    font-size:9px;
+    height:120px;
 
 }
 
-.teacher-detail h1{
+.welcome-title{
 
     font-size:20px;
 
 }
 
+.teacher-name{
+
+    font-size:10px;
+
+    margin-top:4px;
+
+}
+
+.course-code{
+
+    font-size:26px;
+
+}
+
 .subject-name{
 
-    font-size:12px;
+    font-size:13px;
 
 }
 
@@ -605,13 +644,21 @@ a:active{
 
     padding:18px;
 
+    margin-top:25px;
+
 }
 
 .menu-btn{
 
     padding:18px;
 
-    font-size:17px;
+    font-size:18px;
+
+}
+
+.human-footer{
+
+    font-size:14px;
 
 }
 
