@@ -60,12 +60,11 @@ body{
 
     align-items:center;
 
-    gap:25px;
+    gap:16px;
 
     margin-bottom:25px;
 
 }
-
 .teacher-image img{
 
     width:125px;
@@ -214,9 +213,9 @@ body{
 
 .btn-gray{
 
-    background:#d7d7d7;
+    background:#9e9e9e;
 
-    color:#222;
+    color:#ffffff;
 
 }
 
