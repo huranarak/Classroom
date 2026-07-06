@@ -1,5 +1,5 @@
 /* ==========================================
-   GENERAL
+   RESET
 ========================================== */
 
 *{
@@ -24,7 +24,7 @@ body{
 
     margin:auto;
 
-    padding:30px 20px 40px;
+    padding:20px;
 
 }
 
@@ -34,17 +34,25 @@ body{
 
 .top-header{
 
-    text-align:center;
+    width:100%;
 
-    margin-bottom:20px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:10px auto 15px;
 
 }
 
 .cola-logo{
 
-    width:180px;
+    width:170px;
 
     height:auto;
+
+    display:block;
 
 }
 
@@ -62,25 +70,33 @@ body{
 
     gap:14px;
 
-    margin-top:10px;
+    margin-top:5px;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
 }
 
-/* รูปติดบัตร */
+/* รูปอาจารย์ */
+
+.teacher-image{
+
+    flex:0 0 72px;
+
+}
 
 .teacher-image img{
 
-    width:65px;
+    width:72px;
 
-    height:85px;
+    height:92px;
 
     object-fit:cover;
 
-    border-radius:6px;
+    border-radius:8px;
 
-    box-shadow:0 4px 10px rgba(0,0,0,.12);
+    display:block;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
 
 }
 
@@ -104,9 +120,9 @@ body{
 
     font-size:24px;
 
-    line-height:1.1;
-
     font-weight:800;
+
+    line-height:1.08;
 
 }
 
@@ -128,7 +144,7 @@ body{
 
     text-align:center;
 
-    margin-bottom:25px;
+    margin-bottom:22px;
 
 }
 
@@ -140,31 +156,37 @@ body{
 
     font-weight:700;
 
+    color:#222;
+
 }
 
 .course p{
 
     margin-top:6px;
 
-    font-size:15px;
+    font-size:16px;
 
-    color:#555;
+    color:#666;
 
 }
 
 /* ==========================================
-   CARD
+   MENU CARD
 ========================================== */
 
 .menu-card{
 
+    max-width:600px;
+
+    margin:auto;
+
     background:#ffffff;
 
-    border-radius:24px;
+    padding:22px;
 
-    padding:28px;
+    border-radius:22px;
 
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 }
 
@@ -178,19 +200,19 @@ body{
 
     border:none;
 
-    border-radius:18px;
+    border-radius:16px;
 
-    padding:20px;
+    padding:16px;
 
-    margin-bottom:18px;
+    margin-bottom:14px;
 
-    cursor:pointer;
+    font-family:'Poppins',sans-serif;
 
-    font-size:22px;
+    font-size:20px;
 
     font-weight:700;
 
-    font-family:'Poppins',sans-serif;
+    cursor:pointer;
 
     transition:.25s;
 
@@ -208,21 +230,27 @@ body{
 
 }
 
+/* สีส้ม */
+
 .btn-orange{
 
-    background:#ff7a18;
+    background:#f57c00;
 
-    color:#fff;
+    color:#ffffff;
 
 }
+
+/* สีเหลือง */
 
 .btn-yellow{
 
-    background:#ffc928;
+    background:#fbc02d;
 
-    color:#222;
+    color:#222222;
 
 }
+
+/* สีเทา */
 
 .btn-gray{
 
@@ -238,9 +266,11 @@ body{
 
 footer{
 
-    margin-top:25px;
+    margin-top:20px;
 
     text-align:center;
+
+    font-size:14px;
 
     color:#777;
 
@@ -250,51 +280,81 @@ footer{
    MOBILE
 ========================================== */
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
 .page{
 
-    padding:20px 15px 30px;
+    padding:18px;
 
 }
+
+/* Logo */
 
 .cola-logo{
 
-    width:150px;
+    width:145px;
 
 }
 
+/* รูป + ข้อความ */
+
 .profile{
 
-    gap:15px;
+    gap:12px;
+
+    margin-top:5px;
+
+    margin-bottom:16px;
+
+}
+
+.teacher-image{
+
+    flex:0 0 58px;
 
 }
 
 .teacher-image img{
 
-    width:55px;
+    width:58px;
 
-    height:72px;
+    height:75px;
+
+    object-fit:cover;
+
+    border-radius:6px;
 
 }
+
+/* Welcome */
 
 .welcome{
 
-    font-size:20px;
+    font-size:18px;
+
+    line-height:1.05;
 
 }
+
+/* ชื่ออาจารย์ */
 
 .teacher{
 
-    font-size:10px;
+    margin-top:4px;
+
+    font-size:9px;
 
 }
+
+/* รหัสวิชา */
 
 .course h2{
 
-    font-size:28px;
+    font-size:25px;
 
 }
+
+/* ชื่อวิชา */
 
 .course p{
 
@@ -302,17 +362,33 @@ footer{
 
 }
 
+/* Card */
+
 .menu-card{
 
-    padding:18px;
+    padding:16px;
+
+    border-radius:18px;
 
 }
 
+/* ปุ่ม */
+
 .btn{
 
-    font-size:18px;
+    padding:14px;
 
-    padding:17px;
+    font-size:17px;
+
+    border-radius:14px;
+
+}
+
+/* Footer */
+
+footer{
+
+    font-size:12px;
 
 }
 
