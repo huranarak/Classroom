@@ -444,6 +444,8 @@ a:active{
 
     margin-top:10px;
 
+    margin-left:5px;
+
     font-size:15px;
 
     color:#666;
@@ -464,7 +466,7 @@ a:active{
 
     margin:0;
 
-    font-size:34px;
+    font-size:32px;
 
     font-weight:600;
 
@@ -588,7 +590,7 @@ a:active{
 
 .human-header .logo{
 
-    width:155px;
+    width:140px;
 
 }
 
@@ -641,6 +643,8 @@ a:active{
 .course-code{
 
     font-size:28px;
+
+    font-weight:600;
 
 }
 
