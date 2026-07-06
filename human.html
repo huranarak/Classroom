@@ -103,27 +103,34 @@
 
                 </select>
 
-            </div>
-
             <div class="location-box">
 
-                <span>📍 สถานะตำแหน่ง</span>
+    <span>📍 สถานะตำแหน่ง</span>
 
-                <p id="locationStatus">
+    <p id="locationStatus" class="error">
 
-                    ยังไม่ได้ตรวจสอบ
+        🔴 ยังไม่ได้อนุญาตการเข้าถึงตำแหน่ง
 
-                </p>
+    </p>
 
-            </div>
+    <button
+        type="button"
+        id="locationBtn">
 
-            <button
-                type="submit"
-                id="checkBtn">
+        ตรวจสอบตำแหน่ง
 
-                เช็คชื่อเข้าเรียน
+    </button>
 
-            </button>
+</div>
+
+<button
+    type="submit"
+    id="checkBtn"
+    disabled>
+
+    บันทึกข้อมูล
+
+</button>
 
         </form>
 
