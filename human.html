@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CL303353 | Check-in</title>
+    <title>CL303353</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -22,130 +22,81 @@
 
 <div class="container">
 
-    <div class="header">
+    <!-- Logo -->
 
-        <img class="logo"
+    <div class="top-logo">
+
+        <img
         src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
-        alt="COLA Logo">
-
-        <h1>
-
-            📚 CL303353
-
-        </h1>
-
-        <p>
-
-            การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
-
-        </p>
+        alt="COLA">
 
     </div>
 
-    <div class="course-card">
+    <!-- Teacher -->
 
-        <h2>ระบบเช็คชื่อเข้าเรียน</h2>
+    <div class="teacher-section">
 
-        <form id="attendanceForm">
+        <img
+        class="teacher-img"
+        src="https://cola.kku.ac.th/wp-content/uploads/2025/10/2024-08-271724750394.jpg"
+        alt="Teacher">
 
-            <div class="input-group">
+        <div class="teacher-info">
 
-                <label>ชื่อ - สกุล</label>
+            <img
+            class="welcome-logo"
+            src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
+            alt="">
 
-                <input
-                    type="text"
-                    id="fullname"
-                    placeholder="กรอกชื่อ-สกุล"
-                    required>
+            <h1>CL303353</h1>
 
-            </div>
+            <p>
 
-            <div class="input-group">
+                การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
 
-                <label>รหัสนักศึกษา</label>
+            </p>
 
-                <input
-                    type="text"
-                    id="studentId"
-                    maxlength="10"
-                    placeholder="653040xxxx"
-                    required>
+        </div>
 
-            </div>
+    </div>
 
-            <div class="input-group">
+    <!-- Menu -->
 
-                <label>Email KKU</label>
+    <div class="menu-card">
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="example@kkumail.com"
-                    required>
+        <button
+        class="btn orange"
+        onclick="location.href='checkin.html'">
 
-            </div>
+            ระบบเช็คชื่อ
 
-            <div class="input-group">
+        </button>
 
-                <label>สาขา</label>
+        <button
+        class="btn yellow"
+        onclick="location.href='score.html'">
 
-                <select id="major" required>
+            ระบบตรวจสอบคะแนน
 
-                    <option value="">-- กรุณาเลือกสาขา --</option>
+        </button>
 
-                    <option value="GPA">GPA</option>
+        <button
+        class="btn gray"
+        onclick="location.href='report.html'">
 
-                    <option value="FFM">FFM</option>
+            แจ้งปัญหาการใช้งาน
 
-                    <option value="UMT">UMT</option>
-
-                </select>
-
-            </div>
-
-            <div class="location-box">
-
-                <label>📍 สถานะตำแหน่ง</label>
-
-                <p id="locationStatus" class="location-red">
-
-                    🔴 ยังไม่ได้อนุญาตการเข้าถึงตำแหน่ง
-
-                </p>
-
-                <button
-                    type="button"
-                    id="locationBtn"
-                    class="location-btn">
-
-                    ตรวจสอบตำแหน่ง
-
-                </button>
-
-            </div>
-
-            <button
-                type="submit"
-                id="checkBtn"
-                disabled>
-
-                💾 บันทึกข้อมูล
-
-            </button>
-
-        </form>
+        </button>
 
     </div>
 
     <div class="footer">
 
-        By Pichitra K. (TA) 🍃
+        By Pichitra K.
 
     </div>
 
 </div>
-
-<script src="script.js"></script>
 
 </body>
 
