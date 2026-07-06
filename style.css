@@ -357,3 +357,191 @@ a:active{
     }
 
 }
+
+/* ==========================================
+   CL303353 CHECK-IN PAGE
+========================================== */
+
+.course-card{
+    max-width:600px;
+    margin:auto;
+}
+
+.course-card h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+.input-group label{
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:8px;
+    color:#444;
+}
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:2px solid #e5e5e5;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.25s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    outline:none;
+
+    border-color:#f7941d;
+
+    box-shadow:0 0 0 4px rgba(247,148,29,.15);
+
+}
+
+.location-box{
+
+    margin-top:10px;
+
+    margin-bottom:25px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:#fff8ef;
+
+    border:2px solid #ffd49a;
+
+}
+
+.location-box span{
+
+    font-weight:700;
+
+    color:#f7941d;
+
+}
+
+.location-box p{
+
+    margin-top:10px;
+
+    font-size:15px;
+
+    color:#444;
+
+}
+
+#checkBtn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#f7941d;
+
+    color:white;
+
+    padding:16px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#checkBtn:hover{
+
+    background:#df7e0b;
+
+    transform:translateY(-2px);
+
+}
+
+#checkBtn:disabled{
+
+    background:#bbbbbb;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+.success{
+
+    color:#0f9d58;
+
+    font-weight:700;
+
+}
+
+.warning{
+
+    color:#e67e22;
+
+    font-weight:700;
+
+}
+
+.error{
+
+    color:#d93025;
+
+    font-weight:700;
+
+}
+
+.loading{
+
+    opacity:.65;
+
+    pointer-events:none;
+
+}
+
+@media(max-width:768px){
+
+    .course-card{
+
+        padding:25px;
+
+    }
+
+    .input-group input,
+    .input-group select{
+
+        font-size:16px;
+
+    }
+
+    #checkBtn{
+
+        font-size:17px;
+
+    }
+
+}
