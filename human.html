@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CL303353 | Check-in</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <img class="logo"
+        src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
+        alt="COLA Logo">
+
+        <h1>
+            📚 CL303353
+        </h1>
+
+        <p>
+            การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
+        </p>
+
+    </div>
+
+    <div class="course-card">
+
+        <h2>ระบบเช็คชื่อเข้าเรียน</h2>
+
+        <form id="attendanceForm">
+
+            <div class="input-group">
+
+                <label>ชื่อ - สกุล</label>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="กรอกชื่อ-สกุล"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>รหัสนักศึกษา</label>
+
+                <input
+                    type="text"
+                    id="studentId"
+                    maxlength="10"
+                    placeholder="653040xxxx"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Email KKU</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@kkumail.com"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>สาขา</label>
+
+                <select id="major" required>
+
+                    <option value="">
+                        -- เลือกสาขา --
+                    </option>
+
+                    <option value="GPA">
+                        GPA
+                    </option>
+
+                    <option value="FFM">
+                        FFM
+                    </option>
+
+                    <option value="UMT">
+                        UMT
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="location-box">
+
+                <span>📍 สถานะตำแหน่ง</span>
+
+                <p id="locationStatus">
+
+                    ยังไม่ได้ตรวจสอบ
+
+                </p>
+
+            </div>
+
+            <button
+                type="submit"
+                id="checkBtn">
+
+                เช็คชื่อเข้าเรียน
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="footer">
+
+        By Pichitra K. (TA) 🍃
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
