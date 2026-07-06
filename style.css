@@ -382,7 +382,7 @@ a:active{
 
     align-items:flex-start;
 
-    gap:22px;
+    gap:40px;
 
     margin:15px auto 10px;
 
@@ -464,9 +464,9 @@ a:active{
 
     margin:0;
 
-    font-size:48px;
+    font-size:34px;
 
-    font-weight:800;
+    font-weight:600;
 
     color:#111;
 
