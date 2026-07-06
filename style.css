@@ -430,7 +430,7 @@ a:active{
 
 .welcome-title{
 
-    margin-left:5px;
+    margin-left:25px;
 
     font-size:56px;
 
@@ -445,6 +445,8 @@ a:active{
 .teacher-name{
 
     margin-top:10px;
+   
+    margin-left:25px;
 
     font-size:16px;
 
@@ -464,7 +466,7 @@ a:active{
 
     margin:0;
 
-    font-size:52px;
+    font-size:46px;
 
     font-weight:600;
 
