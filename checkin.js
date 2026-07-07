@@ -45,15 +45,15 @@ function requestLocation(){
 
             gpsStatus.innerHTML = "🟢 พร้อมบันทึกข้อมูล";
 
-            gpsStatus.style.color="#2E7D32";
+            gpsStatus.style.color = "#2E7D32";
 
         },
 
         ()=>{
 
-            gpsStatus.innerHTML="🔴 กรุณาอนุญาตการเข้าถึงตำแหน่ง";
+            gpsStatus.innerHTML = "🔴 กรุณาอนุญาตการเข้าถึงตำแหน่ง";
 
-            gpsStatus.style.color="#D32F2F";
+            gpsStatus.style.color = "#D32F2F";
 
         },
 
@@ -81,11 +81,11 @@ function setupStudentId(){
 
         if(value.length>9){
 
-            value=value.substring(0,9)+"-"+value.substring(9,10);
+            value = value.substring(0,9) + "-" + value.substring(9,10);
 
         }
 
-        input.value=value;
+        input.value = value;
 
     });
 
@@ -109,42 +109,100 @@ function setupSubmit(){
 
 function submitData(){
 
-    const name=document.getElementById("name").value.trim();
+    const name = document.getElementById("name").value.trim();
 
-    const studentId=document.getElementById("studentId").value.trim();
+    const studentId = document.getElementById("studentId").value.trim();
 
-    const email=document.getElementById("email").value.trim();
+    const email = document.getElementById("email").value.trim();
 
-    const major=document.getElementById("major").value;
+    const major = document.getElementById("major").value;
 
     if(
 
-        name==="" ||
+        name === "" ||
 
-        studentId==="" ||
+        studentId === "" ||
 
-        email==="" ||
+        email === "" ||
 
-        major===""
+        major === ""
 
     ){
 
-        alert("⚠️ กรุณากรอกข้อมูลให้ครบถ้วน");
+        showWarning();
 
         return;
 
     }
 
-    if(latitude===null || longitude===null){
+    if(latitude === null || longitude === null){
 
-        alert("📍 กรุณาอนุญาตการเข้าถึงตำแหน่ง");
+        showLocationError();
 
         return;
 
     }
 
-    // ส่งข้อมูลในขั้นต่อไป
+    // =====================================
+    // ขั้นต่อไปจะส่งข้อมูลเข้า Apps Script
+    // =====================================
 
-    alert("✅ พร้อมส่งข้อมูล");
+    showSuccess();
 
 }
+
+/* ==========================================
+   POPUP
+========================================== */
+
+function showSuccess(){
+
+    document.getElementById("popupImage").src = "images/success.jpeg";
+
+    document.getElementById("popupTitle").innerHTML =
+    "บันทึกข้อมูลเรียบร้อยแล้ว";
+
+    document.getElementById("popupMessage").innerHTML =
+    "ข้อมูลของคุณถูกบันทึกเรียบร้อยแล้ว";
+
+    document.getElementById("popup").style.display = "flex";
+
+}
+
+function showWarning(){
+
+    document.getElementById("popupImage").src = "images/error.jpeg";
+
+    document.getElementById("popupTitle").innerHTML =
+    "กรอกข้อมูลไม่ครบ";
+
+    document.getElementById("popupMessage").innerHTML =
+    "กรุณากรอกข้อมูลให้ครบถ้วน";
+
+    document.getElementById("popup").style.display = "flex";
+
+}
+
+function showLocationError(){
+
+    document.getElementById("popupImage").src = "images/error.jpeg";
+
+    document.getElementById("popupTitle").innerHTML =
+    "ไม่พบตำแหน่ง";
+
+    document.getElementById("popupMessage").innerHTML =
+    "กรุณาอนุญาตการเข้าถึงตำแหน่ง";
+
+    document.getElementById("popup").style.display = "flex";
+
+}
+
+/* ==========================================
+   CLOSE POPUP
+========================================== */
+
+document.getElementById("popupButton").onclick = function(){
+
+    document.getElementById("popup").style.display = "none";
+
+};
