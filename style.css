@@ -1,358 +1,409 @@
 /* ==========================================
-   RESET
+   COLA CLASSROOM
+   Version 1.0
+========================================== */
+
+:root{
+
+    /* Background */
+
+    --bg-color:#FDFBF7;
+
+    /* Card */
+
+    --card-color:#FFFFFF;
+
+    /* Text */
+
+    --text-color:#000000;
+
+    --sub-text:#757575;
+
+    /* Border */
+
+    --border:#ECECEC;
+
+    /* Shadow */
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    /* Radius */
+
+    --radius:22px;
+
+    /* ====================
+        Font Size
+    ==================== */
+
+    --welcome-size:46px;
+
+    --title-size:38px;
+
+    --teacher-size:16px;
+
+    --heading-size:36px;
+
+    --course-code-size:24px;
+
+    --course-name-size:14px;
+
+    --enter-size:16px;
+
+    --footer-size:15px;
+
+    /* ====================
+        Font Weight
+    ==================== */
+
+    --welcome-weight:600;
+
+    --title-weight:600;
+
+    --teacher-weight:300;
+
+    --heading-weight:600;
+
+    --course-code-weight:600;
+
+    --course-name-weight:300;
+
+    --enter-weight:600;
+
+    --footer-weight:400;
+
+}
+
+
+/* ==========================================
+    Reset
 ========================================== */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+
 }
 
-/* ==========================================
-   BODY
-========================================== */
 
 body{
-    background:#F8F6F0;
-    color:#000;
-    display:flex;
-    justify-content:center;
-    min-height:100vh;
+
+    font-family:'Prompt',sans-serif;
+
+    background:var(--bg-color);
+
+    color:var(--text-color);
+
 }
 
+
 /* ==========================================
-   CONTAINER
+    Container
 ========================================== */
 
 .container{
 
     width:100%;
-    max-width:430px;
 
-    min-height:100vh;
+    max-width:480px;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    margin:auto;
 
-    padding:30px 20px;
+    padding:35px 25px 40px;
 
-}
-
-/* ==========================================
-   HEADER
-========================================== */
-
-.header{
-
-    width:100%;
     text-align:center;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
 }
 
+
 /* ==========================================
-   LOGO
+    Logo
 ========================================== */
 
 .logo{
 
-    width:165px;
+    width:105px;
 
     display:block;
 
-    margin:0 auto 200px auto;
+    margin:auto;
+
+    margin-bottom:22px;
 
 }
+
 
 /* ==========================================
-   WELCOME
+    Welcome
 ========================================== */
 
-h1{
+.welcome{
 
-    margin-top:0;
+    font-size:var(--welcome-size);
 
-    font-size:50px;
+    font-weight:var(--welcome-weight);
 
-    line-height:56px;
-
-    font-weight:700;
-
-    color:#000;
-
-    text-align:center;
+    color:var(--text-color);
 
 }
 
-h1 span{
-
-    font-size:50px;
-
-    line-height:56px;
-
-    font-weight:700;
-
-    color:#000;
-
-}
-/* ==========================================
-   TEACHER
-========================================== */
-
-.header p{
-
-    margin-top:12px;
-
-    margin-bottom:35px;
-
-    font-size:15px;
-
-    font-weight:400;
-
-    color:#666;
-
-}
 
 /* ==========================================
-   COURSE CARD
+    Classroom
 ========================================== */
 
-.course-card{
+.title{
 
-    width:100%;
-    max-width:340px;
+    font-size:var(--title-size);
 
-    background:#FFFFFF;
+    font-weight:var(--title-weight);
 
-    border-radius:22px;
-
-    padding:16px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-/* ==========================================
-   CARD TITLE
-========================================== */
-
-.course-card h2{
-
-    text-align:center;
-
-    font-size:22px;
-
-    font-weight:700;
-
-    color:#000;
-
-    margin-bottom:14px;
-
-}
-
-/* ==========================================
-   BUTTON
-========================================== */
-
-button{
-
-    width:100%;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#FFD34A;
-
-    padding:11px 14px;
-
-    margin-top:8px;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-    color:#000;
-
-}
-
-.orange{
-
-    background:#FF964A;
-
-}
-
-button:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:0 6px 16px rgba(0,0,0,.12);
-
-}
-
-button,
-button *{
-
-    color:#000 !important;
-
-}
-
-/* ==========================================
-   COURSE CODE
-========================================== */
-
-.course-code{
-
-    font-size:20px;
-
-    font-weight:700;
-
-    line-height:1;
-
-    margin-bottom:2px;
-
-}
-
-/* ==========================================
-   COURSE NAME
-========================================== */
-
-.course-name{
-
-    font-size:12px;
-
-    font-weight:500;
+    color:var(--text-color);
 
     line-height:1.15;
 
+    margin-top:3px;
+
 }
 
+
 /* ==========================================
-   FOOTER
+    Teacher
+========================================== */
+
+.teacher{
+
+    margin-top:10px;
+
+    font-size:var(--teacher-size);
+
+    font-weight:var(--teacher-weight);
+
+    color:var(--sub-text);
+
+    line-height:1.6;
+
+}
+
+
+/* ==========================================
+    Line
+========================================== */
+
+hr{
+
+    margin:32px 0;
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+}
+
+
+/* ==========================================
+    Heading
+========================================== */
+
+.heading{
+
+    font-size:var(--heading-size);
+
+    font-weight:var(--heading-weight);
+
+    color:var(--text-color);
+
+    margin-bottom:22px;
+
+}
+
+
+/* ==========================================
+    Card
+========================================== */
+
+.card{
+
+    background:var(--card-color);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:24px;
+
+    margin-bottom:22px;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.card:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ==========================================
+    Course Code
+========================================== */
+
+.courseCode{
+
+    font-size:var(--course-code-size);
+
+    font-weight:var(--course-code-weight);
+
+    color:var(--text-color);
+
+}
+
+
+/* ==========================================
+    Course Name
+========================================== */
+
+.courseName{
+
+    margin-top:10px;
+
+    font-size:var(--course-name-size);
+
+    font-weight:var(--course-name-weight);
+
+    color:var(--sub-text);
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================
+    Enter
+========================================== */
+
+.enter{
+
+    margin-top:22px;
+
+    font-size:var(--enter-size);
+
+    font-weight:var(--enter-weight);
+
+    color:var(--text-color);
+
+}
+
+
+/* ==========================================
+    Footer
 ========================================== */
 
 .footer{
 
-    margin-top:18px;
+    margin-top:20px;
 
-    text-align:center;
+    font-size:var(--footer-size);
 
-    font-size:13px;
+    font-weight:var(--footer-weight);
 
-    color:#777;
+    color:var(--sub-text);
 
 }
+
 
 /* ==========================================
-   LINK
+    Mobile
 ========================================== */
 
-a{
-
-    color:inherit;
-    text-decoration:none;
-
-}
-
-a:visited{
-
-    color:inherit;
-
-}
-
-a:hover{
-
-    color:inherit;
-
-}
-
-a:active{
-
-    color:inherit;
-
-}
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (max-width:480px){
+@media(max-width:768px){
 
     .container{
 
-        max-width:100%;
-        width:100%;
-
-        padding:24px;
+        padding:30px 22px;
 
     }
 
     .logo{
 
-        width:150px;
-
-        margin-bottom:160px;
+        width:90px;
 
     }
 
-    h1{
-
-        font-size:48px;
-
-        line-height:52px;
-
-        font-weight:700;
-
-    }
-
-    h1 span{
-
-        font-size:48px;
-
-        line-height:52px;
-
-        font-weight:700;
-
-    }
-
-    .header p{
-
-        font-size:18px;
-
-    }
-
-    .course-card{
-
-        width:95%;
-
-        max-width:none;
-
-        margin-top:40px;
-
-        padding:18px;
-
-    }
-
-    .course-card h2{
-
-        font-size:24px;
-
-    }
-
-    .course-code{
+    .welcome{
 
         font-size:22px;
 
     }
 
-    .course-name{
+    .title{
 
-        font-size:14px;
+        font-size:40px;
+
+    }
+
+    .teacher{
+
+        font-size:16px;
+
+    }
+
+    .heading{
+
+        font-size:20px;
+
+    }
+
+    .courseCode{
+
+        font-size:22px;
+
+    }
+
+    .courseName{
+
+        font-size:17px;
+
+    }
+
+}
+
+
+/* ==========================================
+    Desktop
+========================================== */
+
+@media(min-width:1024px){
+
+    .container{
+
+        max-width:560px;
+
+    }
+
+    .logo{
+
+        width:120px;
+
+    }
+
+    .title{
+
+        font-size:52px;
 
     }
 
