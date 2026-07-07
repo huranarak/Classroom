@@ -46,34 +46,12 @@ body{
 }
 
 /* ==========================================
-   TITLE
-========================================== */
-
-.title{
-
-    width:100%;
-
-    background:#FF964A;
-
-    color:#fff;
-
-    border-radius:18px;
-
-    padding:12px;
-
-    font-size:22px;
-
-    font-weight:700;
-
-    margin-bottom:14px;
-
-}
-
-/* ==========================================
    COURSE
 ========================================== */
 
 .course-box{
+
+    margin-top:30px;
 
     width:100%;
 
