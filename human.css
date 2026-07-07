@@ -83,13 +83,15 @@ body{
 
     text-align:center;
 
+    margin-top:100px;      /* เพิ่มระยะห่างจากโลโก้ */
+
     margin-bottom:30px;
 
 }
 
 .welcome-title{
 
-    font-size:53px;
+    font-size:56px;
 
     font-weight:700;
 
@@ -119,7 +121,9 @@ body{
 
     text-align:center;
 
-    margin-bottom:15px;
+    margin-top:10px;      /* ระยะห่างจากชื่ออาจารย์ */
+
+    margin-bottom:6px;
 
 }
 
@@ -135,7 +139,7 @@ body{
 
 .course-name{
 
-    margin-top:4px;
+    margin-top:0px;
 
     font-size:15px;
 
@@ -250,6 +254,12 @@ footer{
 .page{
 
     padding:22px 18px;
+
+}
+
+.welcome-section{
+
+    margin-top:50px;
 
 }
 
