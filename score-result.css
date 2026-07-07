@@ -1,0 +1,345 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    background:#F8F6F0;
+
+    color:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.page{
+
+    width:100%;
+
+    max-width:430px;
+
+    min-height:100vh;
+
+    padding:25px 20px 35px;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   COURSE
+========================================== */
+
+.course-box{
+
+    width:100%;
+
+    background:#FFD34A;
+
+    border-radius:16px;
+
+    padding:14px;
+
+    margin-bottom:20px;
+
+}
+
+.course-box h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+.course-box p{
+
+    font-size:13px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   SCORE CARD
+========================================== */
+
+.score-card{
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    text-align:left;
+
+}
+
+.student-name{
+
+    font-size:21px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+.student-id{
+
+    font-size:16px;
+
+    color:#666;
+
+    text-align:center;
+
+    margin-top:6px;
+
+    margin-bottom:18px;
+
+}
+
+.score-card hr{
+
+    border:none;
+
+    border-top:1px solid #EAEAEA;
+
+    margin-bottom:18px;
+
+}
+
+.score-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    font-size:17px;
+
+}
+
+.score-row strong{
+
+    font-size:18px;
+
+}
+
+.grade strong{
+
+    color:#2E7D32;
+
+    font-size:24px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.button-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:25px;
+
+}
+
+.report-btn{
+
+    background:#616161;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 22px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.report-btn:hover{
+
+    background:#424242;
+
+}
+
+.ok-btn{
+
+    background:#66BB6A;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 24px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.ok-btn:hover{
+
+    opacity:.9;
+
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.popup-box{
+
+    width:90%;
+
+    max-width:360px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.popup-box h2{
+
+    font-size:22px;
+
+    margin-bottom:16px;
+
+}
+
+.popup-box p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    margin-top:25px;
+
+    color:#777;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.page{
+
+    padding:20px 16px 30px;
+
+}
+
+.course-box h2{
+
+    font-size:22px;
+
+}
+
+.student-name{
+
+    font-size:19px;
+
+}
+
+.score-row{
+
+    font-size:16px;
+
+}
+
+.grade strong{
+
+    font-size:22px;
+
+}
+
+}
