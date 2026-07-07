@@ -39,21 +39,9 @@ body{
 
     min-height:100vh;
 
-    padding:30px 20px;
+    padding:25px 20px 35px;
 
-}
-
-/* ==========================================
-   LOGO
-========================================== */
-
-.logo{
-
-    width:120px;
-
-    display:block;
-
-    margin:0 auto 30px;
+    text-align:center;
 
 }
 
@@ -65,37 +53,77 @@ body{
 
     width:100%;
 
-    background:#FF7A1A;
+    background:#FF964A;
 
     color:#fff;
 
-    text-align:center;
+    border-radius:18px;
 
-    font-size:24px;
+    padding:16px;
+
+    font-size:30px;
 
     font-weight:700;
 
-    padding:15px;
-
-    border-radius:18px;
-
-    margin-bottom:25px;
+    margin-bottom:18px;
 
 }
 
 /* ==========================================
-   CARD
+   COURSE
+========================================== */
+
+.course-box{
+
+    width:100%;
+
+    background:#FFD34A;
+
+    border-radius:18px;
+
+    padding:16px;
+
+    margin-bottom:20px;
+
+}
+
+.course-box h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.course-box p{
+
+    font-size:15px;
+
+    line-height:1.4;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   FORM CARD
 ========================================== */
 
 .form-card{
 
+    width:100%;
+
     background:#fff;
 
-    border-radius:24px;
+    border-radius:22px;
 
     padding:22px;
 
     box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    text-align:left;
 
 }
 
@@ -103,23 +131,29 @@ body{
    LABEL
 ========================================== */
 
-label{
+.form-card label{
 
     display:block;
-
-    font-size:16px;
-
-    font-weight:600;
 
     margin-top:18px;
 
     margin-bottom:8px;
 
+    font-size:15px;
+
+    font-weight:600;
+
 }
 
-label:first-child{
+.form-card label:first-child{
 
     margin-top:0;
+
+}
+
+.form-card span{
+
+    color:#E53935;
 
 }
 
@@ -127,8 +161,8 @@ label:first-child{
    INPUT
 ========================================== */
 
-input,
-select{
+.form-card input,
+.form-card select{
 
     width:100%;
 
@@ -138,13 +172,24 @@ select{
 
     border-radius:14px;
 
-    background:#F2F2F2;
+    background:#F3F3F3;
 
     padding:0 16px;
 
     font-size:15px;
 
     outline:none;
+
+    transition:.25s;
+
+}
+
+.form-card input:focus,
+.form-card select:focus{
+
+    background:#fff;
+
+    border:2px solid #FF964A;
 
 }
 
@@ -154,17 +199,7 @@ select{
 
 ::placeholder{
 
-    color:#BFBFBF;
-
-}
-
-/* ==========================================
-   SELECT
-========================================== */
-
-select{
-
-    cursor:pointer;
+    color:#B8B8B8;
 
 }
 
@@ -180,25 +215,29 @@ select{
 
 .gps-title{
 
-    font-size:16px;
+    text-align:center;
 
-    font-weight:600;
+    font-size:17px;
 
-    margin-bottom:8px;
+    font-weight:700;
+
+    margin-bottom:10px;
 
 }
 
 .gps-status{
 
-    background:#F2F2F2;
+    background:#F3F3F3;
 
     border-radius:14px;
 
-    padding:14px 16px;
+    padding:14px;
 
-    font-size:15px;
+    text-align:center;
 
     color:#D32F2F;
+
+    font-size:15px;
 
     font-weight:500;
 
@@ -208,23 +247,27 @@ select{
    BUTTON
 ========================================== */
 
+.submit-area{
+
+    text-align:center;
+
+}
+
 .submit-btn{
 
-    width:100%;
+    margin-top:25px;
 
-    height:56px;
-
-    margin-top:28px;
+    padding:14px 40px;
 
     border:none;
 
     border-radius:18px;
 
-    background:#FF7A1A;
+    background:#66BB6A;
 
     color:#fff;
 
-    font-size:20px;
+    font-size:19px;
 
     font-weight:700;
 
@@ -238,7 +281,7 @@ select{
 
     transform:translateY(-2px);
 
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    box-shadow:0 6px 16px rgba(0,0,0,.15);
 
 }
 
@@ -248,13 +291,13 @@ select{
 
 .footer{
 
-    margin-top:22px;
+    margin-top:25px;
 
     text-align:center;
 
-    color:#777;
-
     font-size:13px;
+
+    color:#777;
 
 }
 
@@ -262,27 +305,35 @@ select{
    MOBILE
 ========================================== */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
 .page{
 
-    padding:24px 18px;
-
-}
-
-.logo{
-
-    width:100px;
-
-    margin-bottom:25px;
+    padding:22px 18px 30px;
 
 }
 
 .title{
 
-    font-size:22px;
+    font-size:26px;
+
+}
+
+.course-box{
 
     padding:14px;
+
+}
+
+.course-box h2{
+
+    font-size:24px;
+
+}
+
+.course-box p{
+
+    font-size:13px;
 
 }
 
@@ -292,14 +343,14 @@ select{
 
 }
 
-label{
+.form-card label{
 
-    font-size:15px;
+    font-size:14px;
 
 }
 
-input,
-select{
+.form-card input,
+.form-card select{
 
     height:48px;
 
@@ -321,9 +372,9 @@ select{
 
 .submit-btn{
 
-    height:52px;
+    padding:13px 34px;
 
-    font-size:18px;
+    font-size:17px;
 
 }
 
