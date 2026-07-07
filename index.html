@@ -2,132 +2,94 @@
 <html lang="th">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLA Classroom</title>
 
-<title>CL303353</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <!-- COLA LOGO -->
-
-    <div class="human-header">
-
+        <!-- Logo -->
         <img class="logo"
-        src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
-        alt="COLA">
+            src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
+            alt="COLA Logo">
 
-    </div>
+        <!-- Welcome -->
+        <p class="welcome">
+           🎓 Welcome to
+        </p>
 
-    <!-- PROFILE -->
+        <h1 class="title">
+            Classroom 🎉
+        </h1>
 
-    <div class="teacher-section">
+        <!-- Teacher -->
+        <p class="teacher">
+            Assoc. Prof. Dr. Vissanu Zumitzavan
+        </p>
 
-        <!-- รูปอาจารย์ -->
+        <hr>
 
-        <div class="teacher-photo">
+        <!-- Heading -->
+        <h2 class="heading">
+            📚 กรุณาเลือกรายวิชา ‼️
+        </h2>
 
-            <img
-            src="https://cola.kku.ac.th/wp-content/uploads/2025/10/2024-08-271724750394.jpg"
-            alt="Assoc. Prof. Dr. Vissanu Zumitzavan">
+        <!-- Human -->
+        <div class="card"
+            onclick="window.location.href='Human/index.html'">
 
-        </div>
-
-        <!-- ข้อความ -->
-
-        <div class="teacher-detail">
-
-            <div class="welcome-block">
-
-                <h2 class="welcome-title">
-
-                    🎓 Welcome to
-                    <br>
-                    Classroom🎉
-
-                </h2>
-
-                <p class="teacher-name">
-
-                    Assoc. Prof. Dr. Vissanu Zumitzavan
-
-                </p>
-
+            <div class="courseCode">
+                CL303353
             </div>
 
-            <div class="course-block">
+            <div class="courseName">
+                การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
+            </div>
 
-                <h1 class="course-code">
-
-                    CL303353
-
-                </h1>
-
-                <p class="subject-name">
-
-                    การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
-
-                </p>
-
+            <div class="enter">
+                Enter Classroom →
             </div>
 
         </div>
 
-    </div>
+        <!-- Data -->
+        <div class="card"
+            onclick="window.location.href='Data/index.html'">
 
-    <!-- MENU -->
+            <div class="courseCode">
+                CL304372
+            </div>
 
-    <div class="menu-card">
+            <div class="courseName">
+                การวิเคราะห์ข้อมูลทางกิจการสาธารณะ
+            </div>
 
-        <button
-            class="menu-btn orange"
-            onclick="location.href='checkin.html'">
+            <div class="enter">
+                Enter Classroom →
+            </div>
 
-            📍 ระบบเช็คชื่อ
+        </div>
 
-        </button>
+        <hr>
 
-        <button
-            class="menu-btn yellow"
-            onclick="location.href='score.html'">
-
-            📊 ระบบตรวจสอบคะแนน
-
-        </button>
-
-        <button
-            class="menu-btn gray"
-            onclick="location.href='report.html'">
-
-            ⚙️ แจ้งปัญหาการใช้งาน
-
-        </button>
+        <div class="footer">
+            By P.K.
+        </div>
 
     </div>
 
-    <!-- FOOTER -->
-
-    <div class="human-footer">
-
-        By Pichitra K. (TA) 🍃
-
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
