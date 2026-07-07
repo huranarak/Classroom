@@ -2,6 +2,9 @@
    CONFIG
 ========================================== */
 
+const WEB_APP_URL =
+"https://script.google.com/macros/s/AKfycbwBRkFGgdmcMZ8E1UHAIkskmu_6iAvLpgoiywGXh28I-mwoJ0hRW7sm__sSR0Ow_VhR/exec";
+
 let latitude = null;
 let longitude = null;
 
@@ -17,6 +20,10 @@ window.onload = () => {
 
     setupSubmit();
 
+    setupFormWatcher();
+
+    document.getElementById("submitBtn").disabled = true;
+
 };
 
 /* ==========================================
@@ -29,7 +36,8 @@ function requestLocation(){
 
     if(!navigator.geolocation){
 
-        gpsStatus.innerHTML = "🔴 อุปกรณ์ไม่รองรับ GPS";
+        gpsStatus.innerHTML="🔴 อุปกรณ์ไม่รองรับ GPS";
+        gpsStatus.style.color="#D32F2F";
 
         return;
 
@@ -39,21 +47,29 @@ function requestLocation(){
 
         (position)=>{
 
-            latitude = position.coords.latitude;
+            latitude=position.coords.latitude;
 
-            longitude = position.coords.longitude;
+            longitude=position.coords.longitude;
 
-            gpsStatus.innerHTML = "🟢 พร้อมบันทึกข้อมูล";
+            gpsStatus.innerHTML="🟢 พร้อมบันทึกข้อมูล";
 
-            gpsStatus.style.color = "#2E7D32";
+            gpsStatus.style.color="#2E7D32";
+
+            checkForm();
 
         },
 
         ()=>{
 
-            gpsStatus.innerHTML = "🔴 กรุณาอนุญาตการเข้าถึงตำแหน่ง";
+            latitude=null;
 
-            gpsStatus.style.color = "#D32F2F";
+            longitude=null;
+
+            gpsStatus.innerHTML="🔴 กรุณาอนุญาตการเข้าถึงตำแหน่ง";
+
+            gpsStatus.style.color="#D32F2F";
+
+            checkForm();
 
         },
 
@@ -73,21 +89,93 @@ function requestLocation(){
 
 function setupStudentId(){
 
-    const input = document.getElementById("studentId");
+    const input=document.getElementById("studentId");
 
     input.addEventListener("input",()=>{
 
-        let value = input.value.replace(/\D/g,'');
+        let value=input.value.replace(/\D/g,"");
 
-        if(value.length>9){
+        if(value.length>10){
 
-            value = value.substring(0,9) + "-" + value.substring(9,10);
+            value=value.substring(0,10);
 
         }
 
-        input.value = value;
+        if(value.length>=10){
+
+            value=value.substring(0,9)+"-"+value.substring(9);
+
+        }
+
+        input.value=value;
+
+        checkForm();
 
     });
+
+}
+
+/* ==========================================
+   WATCH FORM
+========================================== */
+
+function setupFormWatcher(){
+
+    document.querySelectorAll("input,select").forEach(item=>{
+
+        item.addEventListener("input",checkForm);
+
+        item.addEventListener("change",checkForm);
+
+    });
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+function checkForm(){
+
+    const name=document.getElementById("name").value.trim();
+
+    const studentId=document.getElementById("studentId").value.trim();
+
+    const email=document.getElementById("email").value.trim();
+
+    const major=document.getElementById("major").value;
+
+    const button=document.getElementById("submitBtn");
+
+    if(
+
+        name!=="" &&
+
+        studentId!=="" &&
+
+        email!=="" &&
+
+        major!=="" &&
+
+        latitude!==null &&
+
+        longitude!==null
+
+    ){
+
+        button.disabled=false;
+
+        button.classList.add("active");
+
+    }
+
+    else{
+
+        button.disabled=true;
+
+        button.classList.remove("active");
+
+    }
 
 }
 
@@ -104,28 +192,28 @@ function setupSubmit(){
 }
 
 /* ==========================================
-   CHECK
+   SUBMIT DATA
 ========================================== */
 
 function submitData(){
 
-    const name = document.getElementById("name").value.trim();
+    const name=document.getElementById("name").value.trim();
 
-    const studentId = document.getElementById("studentId").value.trim();
+    const studentId=document.getElementById("studentId").value.trim();
 
-    const email = document.getElementById("email").value.trim();
+    const email=document.getElementById("email").value.trim();
 
-    const major = document.getElementById("major").value;
+    const major=document.getElementById("major").value;
 
     if(
 
-        name === "" ||
+        name==="" ||
 
-        studentId === "" ||
+        studentId==="" ||
 
-        email === "" ||
+        email==="" ||
 
-        major === ""
+        major===""
 
     ){
 
@@ -135,7 +223,7 @@ function submitData(){
 
     }
 
-    if(latitude === null || longitude === null){
+    if(latitude===null || longitude===null){
 
         showLocationError();
 
@@ -143,66 +231,10 @@ function submitData(){
 
     }
 
-    // =====================================
-    // ขั้นต่อไปจะส่งข้อมูลเข้า Apps Script
-    // =====================================
+    document.getElementById("submitBtn").disabled=true;
 
-    showSuccess();
+    document.getElementById("submitBtn").innerHTML="กำลังบันทึก...";
 
-}
-
-/* ==========================================
-   POPUP
-========================================== */
-
-function showSuccess(){
-
-    document.getElementById("popupImage").src = "images/success.jpeg";
-
-    document.getElementById("popupTitle").innerHTML =
-    "บันทึกข้อมูลเรียบร้อยแล้ว";
-
-    document.getElementById("popupMessage").innerHTML =
-    "ข้อมูลของคุณถูกบันทึกเรียบร้อยแล้ว";
-
-    document.getElementById("popup").style.display = "flex";
+    // ===== Part 2 จะมาต่อจากตรงนี้ =====
 
 }
-
-function showWarning(){
-
-    document.getElementById("popupImage").src = "images/error.jpeg";
-
-    document.getElementById("popupTitle").innerHTML =
-    "กรอกข้อมูลไม่ครบ";
-
-    document.getElementById("popupMessage").innerHTML =
-    "กรุณากรอกข้อมูลให้ครบถ้วน";
-
-    document.getElementById("popup").style.display = "flex";
-
-}
-
-function showLocationError(){
-
-    document.getElementById("popupImage").src = "images/error.jpeg";
-
-    document.getElementById("popupTitle").innerHTML =
-    "ไม่พบตำแหน่ง";
-
-    document.getElementById("popupMessage").innerHTML =
-    "กรุณาอนุญาตการเข้าถึงตำแหน่ง";
-
-    document.getElementById("popup").style.display = "flex";
-
-}
-
-/* ==========================================
-   CLOSE POPUP
-========================================== */
-
-document.getElementById("popupButton").onclick = function(){
-
-    document.getElementById("popup").style.display = "none";
-
-};
