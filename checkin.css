@@ -295,6 +295,88 @@ body{
 }
 
 /* ==========================================
+   POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.popup-box{
+
+    width:90%;
+
+    max-width:360px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.popup-box img{
+
+    width:120px;
+
+    margin-bottom:15px;
+
+}
+
+.popup-box h2{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.popup-box p{
+
+    color:#666;
+
+    line-height:1.5;
+
+    margin-bottom:20px;
+
+}
+
+.popup-box button{
+
+    border:none;
+
+    background:#66BB6A;
+
+    color:#fff;
+
+    padding:12px 28px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
    MOBILE
 ========================================== */
 
