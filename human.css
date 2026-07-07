@@ -17,11 +17,11 @@ body{
 
     background:#F8F6F0;
 
-    color:#000;
-
     display:flex;
 
     justify-content:center;
+
+    color:#000;
 
     min-height:100vh;
 
@@ -37,15 +37,13 @@ body{
 
     max-width:430px;
 
-    min-height:100vh;
+    padding:28px 20px 40px;
 
     display:flex;
 
     flex-direction:column;
 
     align-items:center;
-
-    padding:24px 20px 35px;
 
 }
 
@@ -55,21 +53,17 @@ body{
 
 .top-header{
 
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    margin-bottom:50px;
+    text-align:center;
 
 }
 
 .cola-logo{
 
-    width:120px;
+    width:110px;
 
-    height:auto;
+    display:block;
+
+    margin:auto;
 
 }
 
@@ -83,17 +77,15 @@ body{
 
     text-align:center;
 
-    margin-top:100px;      /* เพิ่มระยะห่างจากโลโก้ */
-
-    margin-bottom:60px;
+    margin-top:35px;
 
 }
 
 .welcome-title{
 
-    font-size:42px;
+    font-size:30px;
 
-    font-weight:800;
+    font-weight:700;
 
     line-height:1.15;
 
@@ -105,8 +97,8 @@ body{
 
     margin-top:10px;
 
-    margin-bottom:4px;
-   
+    margin-bottom:5px;
+
     font-size:14px;
 
     color:#666;
@@ -123,29 +115,25 @@ body{
 
     text-align:center;
 
-    margin-top:30px;      /* ระยะห่างจากชื่ออาจารย์ */
+    margin-top:0;
 
-    margin-bottom:25px;
+    margin-bottom:50px;
 
 }
 
 .course-code{
 
-    margin-top:0;
-
-    margin-bottom:4px;
-
-    font-size:34px;
+    font-size:36px;
 
     font-weight:700;
 
-    color:#000;
+    line-height:1;
+
+    margin-bottom:6px;
 
 }
 
 .course-name{
-
-    margin-top:0px;
 
     font-size:15px;
 
@@ -156,22 +144,18 @@ body{
 }
 
 /* ==========================================
-   MENU CARD
+   MENU
 ========================================== */
 
 .menu-card{
 
-    .menu-card{
-
-    width:85%;          /* เดิม 100% */
-
-    max-width:340px;    /* เดิม 430px */
-
-    padding:14px;       /* เดิม 18px */
+    width:88%;
 
     background:#fff;
 
-    border-radius:20px;
+    border-radius:18px;
+
+    padding:14px;
 
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 
@@ -187,9 +171,9 @@ body{
 
     border:none;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    padding:12px;
+    padding:13px;
 
     margin-bottom:10px;
 
@@ -212,8 +196,6 @@ body{
 .btn:hover{
 
     transform:translateY(-2px);
-
-    box-shadow:0 6px 16px rgba(0,0,0,.12);
 
 }
 
@@ -247,7 +229,9 @@ body{
 
 footer{
 
-    margin-top:18px;
+    margin-top:20px;
+
+    text-align:center;
 
     font-size:13px;
 
@@ -263,27 +247,25 @@ footer{
 
 .page{
 
-    padding:22px 18px;
-
-}
-
-.welcome-section{
-
-    margin-top:60px;
+    padding:24px 18px 35px;
 
 }
 
 .cola-logo{
 
-    width:105px;
+    width:95px;
+
+}
+
+.welcome-section{
+
+    margin-top:28px;
 
 }
 
 .welcome-title{
 
-    font-size:32px;
-
-    line-height:1.2;
+    font-size:25px;
 
 }
 
@@ -291,11 +273,13 @@ footer{
 
     font-size:11px;
 
+    margin-bottom:5px;
+
 }
 
 .course-code{
 
-    font-size:28px;
+    font-size:30px;
 
 }
 
@@ -305,17 +289,27 @@ footer{
 
 }
 
+.course-section{
+
+    margin-bottom:45px;
+
+}
+
 .menu-card{
 
-    padding:16px;
+    width:92%;
+
+    padding:12px;
 
 }
 
 .btn{
 
-    padding:14px;
+    padding:12px;
 
-    font-size:16px;
+    font-size:15px;
+
+    margin-bottom:8px;
 
 }
 
