@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Check-in | CL303353</title>
+
+    <link rel="stylesheet" href="checkin.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- ================= LOGO ================= -->
+
+    <div class="top-header">
+
+        <img
+            src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
+            class="cola-logo"
+            alt="COLA Logo">
+
+    </div>
+
+    <!-- ================= TITLE ================= -->
+
+    <section class="title-section">
+
+        <h1>📍 ระบบเช็คชื่อ</h1>
+
+        <h2>CL303353</h2>
+
+        <p>การพัฒนาทุนมนุษย์ในศตวรรษที่ 21</p>
+
+    </section>
+
+    <!-- ================= FORM ================= -->
+
+    <section class="form-card">
+
+        <!-- Name -->
+
+        <label>
+
+            ชื่อ-นามสกุล <span>*</span>
+
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="นางสาวโคล่า ซ่าสดชื่น"
+            required>
+
+        <!-- Student ID -->
+
+        <label>
+
+            รหัสนักศึกษา <span>*</span>
+
+        </label>
+
+        <input
+            type="text"
+            id="studentId"
+            maxlength="11"
+            placeholder="613280xxx-x"
+            required>
+
+        <!-- Email -->
+
+        <label>
+
+            Email <span>*</span>
+
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="student@kkumail.com"
+            required>
+
+        <!-- Major -->
+
+        <label>
+
+            สาขา <span>*</span>
+
+        </label>
+
+        <select
+            id="major"
+            required>
+
+            <option value="">
+                เลือกสาขา
+            </option>
+
+            <option value="UMT">
+                UMT
+            </option>
+
+            <option value="GPA">
+                GPA
+            </option>
+
+            <option value="MPA">
+                MPA
+            </option>
+
+            <option value="DPA">
+                DPA
+            </option>
+
+        </select>
+
+    </section>
+
+    <!-- ================= LOCATION ================= -->
+
+    <section class="location-card">
+
+        <h3>
+
+            📍 สถานะตำแหน่ง
+
+        </h3>
+
+        <p id="gpsStatus">
+
+            🔴 กรุณาอนุญาตการเข้าถึงตำแหน่ง
+
+        </p>
+
+    </section>
+
+    <!-- ================= BUTTON ================= -->
+
+    <button
+        id="submitBtn"
+        class="submit-btn">
+
+        🟧 บันทึกข้อมูล
+
+    </button>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        By Pichitra K.
+
+    </footer>
+
+</div>
+
+<script src="checkin.js"></script>
+
+</body>
+
+</html>
