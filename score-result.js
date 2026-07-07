@@ -15,40 +15,16 @@ window.onload = () => {
 function setupButton(){
 
     document
-
-    .getElementById("reportBtn")
-
-    .addEventListener(
-
-        "click",
-
-        openPopup
-
-    );
+        .getElementById("reportBtn")
+        .addEventListener("click", openPopup);
 
     document
-
-    .getElementById("okBtn")
-
-    .addEventListener(
-
-        "click",
-
-        goHome
-
-    );
+        .getElementById("okBtn")
+        .addEventListener("click", goHome);
 
     document
-
-    .getElementById("closePopup")
-
-    .addEventListener(
-
-        "click",
-
-        closePopup
-
-    );
+        .getElementById("closePopup")
+        .addEventListener("click", closePopup);
 
 }
 
@@ -59,10 +35,12 @@ function setupButton(){
 function openPopup(){
 
     document
+        .getElementById("popupImage")
+        .src = "images/REPORT.JPG";
 
-    .getElementById("popup")
-
-    .style.display="flex";
+    document
+        .getElementById("popup")
+        .style.display = "flex";
 
 }
 
@@ -72,7 +50,7 @@ function openPopup(){
 
 function closePopup(){
 
-    window.location.href="human.html";
+    window.location.href = "human.html";
 
 }
 
@@ -82,6 +60,6 @@ function closePopup(){
 
 function goHome(){
 
-    window.location.href="human.html";
+    window.location.href = "human.html";
 
 }
