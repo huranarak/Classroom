@@ -91,7 +91,7 @@ body{
 
 .welcome-title{
 
-    font-size:56px;
+    font-size:48px;
 
     font-weight:700;
 
@@ -121,9 +121,9 @@ body{
 
     text-align:center;
 
-    margin-top:10px;      /* ระยะห่างจากชื่ออาจารย์ */
+    margin-top:4px;      /* ระยะห่างจากชื่ออาจารย์ */
 
-    margin-bottom:6px;
+    margin-bottom:2px;
 
 }
 
