@@ -1,1 +1,361 @@
+/* ==========================================
+   RESET
+========================================== */
 
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    background:#F8F6F0;
+
+    color:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.page{
+
+    width:100%;
+
+    max-width:430px;
+
+    min-height:100vh;
+
+    padding:25px 20px 35px;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   COURSE
+========================================== */
+
+.course-box{
+
+    width:100%;
+
+    background:#FFD34A;
+
+    border-radius:16px;
+
+    padding:14px;
+
+    margin-bottom:20px;
+
+}
+
+.course-box h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+.course-box p{
+
+    font-size:13px;
+
+    font-weight:500;
+
+    line-height:1.3;
+
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-card{
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    text-align:left;
+
+}
+
+/* ==========================================
+   LABEL
+========================================== */
+
+.form-card label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.form-card label:first-child{
+
+    margin-top:0;
+
+}
+
+.form-card span{
+
+    color:#E53935;
+
+}
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.form-card input{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#F3F3F3;
+
+    padding:0 16px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+.form-card input:focus{
+
+    background:#fff;
+
+    border:2px solid #FF964A;
+
+}
+
+::placeholder{
+
+    color:#BDBDBD;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.submit-area{
+
+    text-align:center;
+
+}
+
+.submit-btn{
+
+    margin-top:25px;
+
+    padding:14px 40px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#66BB6A;
+
+    color:#fff;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.submit-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 16px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.popup-box{
+
+    width:90%;
+
+    max-width:360px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.popup-box img{
+
+    width:120px;
+
+    margin-bottom:15px;
+
+}
+
+.popup-box h2{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.popup-box p{
+
+    color:#666;
+
+    line-height:1.6;
+
+    margin-bottom:20px;
+
+}
+
+.ok-btn{
+
+    background:#66BB6A;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 28px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    color:#777;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.page{
+
+    padding:22px 18px 30px;
+
+}
+
+.course-box h2{
+
+    font-size:22px;
+
+}
+
+.course-box p{
+
+    font-size:12px;
+
+}
+
+.form-card{
+
+    padding:18px;
+
+}
+
+.submit-btn{
+
+    font-size:17px;
+
+    padding:13px 34px;
+
+}
+
+}
