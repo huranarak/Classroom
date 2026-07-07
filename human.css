@@ -1,0 +1,277 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#F7F5EF;
+
+    color:#222;
+
+}
+
+.page{
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:30px 20px 40px;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.top-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:35px;
+
+}
+
+.cola-logo{
+
+    width:180px;
+
+    height:auto;
+
+}
+
+/* ==========================================
+   WELCOME
+========================================== */
+
+.welcome-section{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.welcome-title{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    color:#111;
+
+}
+
+.teacher-name{
+
+    margin-top:10px;
+
+    font-size:16px;
+
+    color:#777;
+
+}
+
+/* ==========================================
+   COURSE
+========================================== */
+
+.course-section{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.course-code{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:#111;
+
+}
+
+.course-name{
+
+    margin-top:8px;
+
+    font-size:20px;
+
+    color:#555;
+
+}
+
+/* ==========================================
+   MENU CARD
+========================================== */
+
+.menu-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:18px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btn:last-child{
+
+    margin-bottom:0;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-orange{
+
+    background:#F57C00;
+
+    color:#fff;
+
+}
+
+.btn-yellow{
+
+    background:#FBC02D;
+
+    color:#222;
+
+}
+
+.btn-gray{
+
+    background:#9E9E9E;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media screen and (max-width:768px){
+
+.page{
+
+    padding:20px 15px;
+
+}
+
+.cola-logo{
+
+    width:145px;
+
+}
+
+.welcome-title{
+
+    font-size:24px;
+
+}
+
+.teacher-name{
+
+    font-size:11px;
+
+}
+
+.course-code{
+
+    font-size:30px;
+
+}
+
+.course-name{
+
+    font-size:14px;
+
+}
+
+.menu-card{
+
+    padding:18px;
+
+}
+
+.btn{
+
+    font-size:17px;
+
+    padding:15px;
+
+}
+
+footer{
+
+    font-size:13px;
+
+}
+
+}
