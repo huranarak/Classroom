@@ -91,7 +91,7 @@ body{
 
 .welcome-title{
 
-    font-size:48px;
+    font-size:42px;
 
     font-weight:700;
 
@@ -105,6 +105,8 @@ body{
 
     margin-top:10px;
 
+    margin-bottom:4px;
+   
     font-size:14px;
 
     color:#666;
@@ -123,13 +125,17 @@ body{
 
     margin-top:4px;      /* ระยะห่างจากชื่ออาจารย์ */
 
-    margin-bottom:2px;
+    margin-bottom:25px;
 
 }
 
 .course-code{
 
-    font-size:36px;
+    margin-top:0;
+
+    margin-bottom:4px;
+
+    font-size:34px;
 
     font-weight:700;
 
@@ -271,7 +277,7 @@ footer{
 
 .welcome-title{
 
-    font-size:24px;
+    font-size:32px;
 
     line-height:1.2;
 
