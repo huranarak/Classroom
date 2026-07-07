@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Score | CL303353</title>
+
+    <link rel="stylesheet" href="score.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- ================= COURSE ================= -->
+
+    <div class="course-box">
+
+        <h2>CL303353</h2>
+
+        <p>การพัฒนาทุนมนุษย์ในศตวรรษที่ 21</p>
+
+    </div>
+
+    <!-- ================= FORM ================= -->
+
+    <div class="form-card">
+
+        <label>
+
+            Email <span>*</span>
+
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="student@kkumail.com"
+            required>
+
+        <label>
+
+            รหัสนักศึกษา <span>*</span>
+
+        </label>
+
+        <input
+            type="text"
+            id="studentId"
+            placeholder="653280xxx-x"
+            maxlength="11"
+            required>
+
+    </div>
+
+    <!-- ================= BUTTON ================= -->
+
+    <div class="submit-area">
+
+        <button
+            class="submit-btn"
+            id="searchBtn">
+
+            ตรวจสอบคะแนน
+
+        </button>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <div class="footer">
+
+        By Pichitra K.
+
+    </div>
+
+</div>
+
+<!-- ================= POPUP ================= -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-box">
+
+        <img
+            id="popupImage"
+            src=""
+            alt="Popup">
+
+        <h2 id="popupTitle"></h2>
+
+        <p id="popupMessage"></p>
+
+        <div class="popup-buttons">
+
+            <button
+                id="popupButton"
+                class="ok-btn">
+
+                ตกลง
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="score.js"></script>
+
+</body>
+
+</html>
