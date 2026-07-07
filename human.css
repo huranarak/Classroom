@@ -123,9 +123,9 @@ body{
 
     text-align:center;
 
-    margin-top:0px;      /* ระยะห่างจากชื่ออาจารย์ */
+    margin-top:30px;      /* ระยะห่างจากชื่ออาจารย์ */
 
-    margin-bottom:50px;
+    margin-bottom:25px;
 
 }
 
@@ -161,13 +161,17 @@ body{
 
 .menu-card{
 
-    width:100%;
+    .menu-card{
+
+    width:85%;          /* เดิม 100% */
+
+    max-width:340px;    /* เดิม 430px */
+
+    padding:14px;       /* เดิม 18px */
 
     background:#fff;
 
     border-radius:20px;
-
-    padding:18px;
 
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 
@@ -183,15 +187,15 @@ body{
 
     border:none;
 
-    border-radius:14px;
+    border-radius:12px;
 
-    padding:15px;
+    padding:12px;
 
     margin-bottom:10px;
 
     cursor:pointer;
 
-    font-size:18px;
+    font-size:16px;
 
     font-weight:600;
 
