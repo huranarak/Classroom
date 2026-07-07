@@ -14,20 +14,27 @@
 ========================================== */
 
 body{
+
     background:#F8F6F0;
+
     color:#000;
+
     display:flex;
+
     justify-content:center;
+
     min-height:100vh;
+
 }
 
 /* ==========================================
-   CONTAINER
+   PAGE
 ========================================== */
 
 .page{
 
     width:100%;
+
     max-width:430px;
 
     min-height:100vh;
@@ -38,7 +45,7 @@ body{
 
     align-items:center;
 
-    padding:24px 20px;
+    padding:24px 20px 35px;
 
 }
 
@@ -48,9 +55,13 @@ body{
 
 .top-header{
 
-    text-align:center;
+    width:100%;
 
-    margin-bottom:18px;
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:28px;
 
 }
 
@@ -58,9 +69,7 @@ body{
 
     width:120px;
 
-    display:block;
-
-    margin:auto;
+    height:auto;
 
 }
 
@@ -74,7 +83,7 @@ body{
 
     text-align:center;
 
-    margin-bottom:28px;
+    margin-bottom:30px;
 
 }
 
@@ -84,7 +93,7 @@ body{
 
     font-weight:700;
 
-    line-height:1.2;
+    line-height:1.15;
 
     color:#000;
 
@@ -116,11 +125,11 @@ body{
 
 .course-code{
 
-    font-size:32px;
+    font-size:36px;
 
     font-weight:700;
 
-    line-height:1;
+    color:#000;
 
 }
 
@@ -132,12 +141,12 @@ body{
 
     color:#555;
 
-    line-height:1.35;
+    line-height:1.4;
 
 }
 
 /* ==========================================
-   MENU
+   MENU CARD
 ========================================== */
 
 .menu-card{
@@ -148,7 +157,7 @@ body{
 
     border-radius:22px;
 
-    padding:16px;
+    padding:18px;
 
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 
@@ -166,17 +175,23 @@ body{
 
     border-radius:14px;
 
-    padding:14px;
+    padding:15px;
 
-    margin-top:10px;
+    margin-bottom:12px;
 
     cursor:pointer;
-
-    transition:.25s;
 
     font-size:18px;
 
     font-weight:600;
+
+    transition:.25s;
+
+}
+
+.btn:last-child{
+
+    margin-bottom:0;
 
 }
 
@@ -232,6 +247,12 @@ footer{
 
 @media(max-width:480px){
 
+.page{
+
+    padding:22px 18px;
+
+}
+
 .cola-logo{
 
     width:105px;
@@ -241,6 +262,8 @@ footer{
 .welcome-title{
 
     font-size:24px;
+
+    line-height:1.2;
 
 }
 
@@ -252,7 +275,7 @@ footer{
 
 .course-code{
 
-    font-size:26px;
+    font-size:28px;
 
 }
 
@@ -262,11 +285,23 @@ footer{
 
 }
 
+.menu-card{
+
+    padding:16px;
+
+}
+
 .btn{
+
+    padding:14px;
 
     font-size:16px;
 
-    padding:13px;
+}
+
+footer{
+
+    font-size:12px;
 
 }
 
