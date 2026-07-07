@@ -28,32 +28,41 @@
 
 <div class="page">
 
-    <!-- ================= LOGO ================= -->
+    <!-- ================= TITLE ================= -->
 
-    <div class="top-header">
+    <div class="title">
 
-        <img
-            src="https://cola.kku.ac.th/wp-content/uploads/2025/09/COPA-Logo-C-Main.png"
-            class="cola-logo"
-            alt="COLA Logo">
+        📍 ระบบเช็คชื่อ
 
     </div>
 
-    <!-- ================= TITLE ================= -->
+    <!-- ================= COURSE ================= -->
 
-    <section class="title-section">
-
-        <h1>📍 ระบบเช็คชื่อ</h1>
+    <div class="course-box">
 
         <h2>CL303353</h2>
 
         <p>การพัฒนาทุนมนุษย์ในศตวรรษที่ 21</p>
 
-    </section>
+    </div>
 
     <!-- ================= FORM ================= -->
 
-    <section class="form-card">
+    <div class="form-card">
+
+        <!-- Email -->
+
+        <label>
+
+            Email <span>*</span>
+
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="student@kkumail.com"
+            required>
 
         <!-- Name -->
 
@@ -80,22 +89,8 @@
         <input
             type="text"
             id="studentId"
-            maxlength="11"
             placeholder="613280xxx-x"
-            required>
-
-        <!-- Email -->
-
-        <label>
-
-            Email <span>*</span>
-
-        </label>
-
-        <input
-            type="email"
-            id="email"
-            placeholder="student@kkumail.com"
+            maxlength="11"
             required>
 
         <!-- Major -->
@@ -132,43 +127,49 @@
 
         </select>
 
-    </section>
+        <!-- GPS -->
 
-    <!-- ================= LOCATION ================= -->
+        <div class="gps">
 
-    <section class="location-card">
+            <div class="gps-title">
 
-        <h3>
+                📍 สถานะตำแหน่ง
 
-            📍 สถานะตำแหน่ง
+            </div>
 
-        </h3>
+            <div
+                class="gps-status"
+                id="gpsStatus">
 
-        <p id="gpsStatus">
+                🔴 กรุณาอนุญาตการเข้าถึงตำแหน่ง
 
-            🔴 กรุณาอนุญาตการเข้าถึงตำแหน่ง
+            </div>
 
-        </p>
+        </div>
 
-    </section>
+    </div>
 
     <!-- ================= BUTTON ================= -->
 
-    <button
-        id="submitBtn"
-        class="submit-btn">
+    <div class="submit-area">
 
-        🟧 บันทึกข้อมูล
+        <button
+            class="submit-btn"
+            id="submitBtn">
 
-    </button>
+            บันทึกข้อมูล
+
+        </button>
+
+    </div>
 
     <!-- ================= FOOTER ================= -->
 
-    <footer>
+    <div class="footer">
 
         By Pichitra K.
 
-    </footer>
+    </div>
 
 </div>
 
