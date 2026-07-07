@@ -479,7 +479,7 @@ body{
 
 .report-btn{
 
-    background:#FF964A;
+    background:#616161;
 
     color:#fff;
 
@@ -501,7 +501,7 @@ body{
 
 .report-btn:hover{
 
-    opacity:.9;
+    background:#424242;
 
 }
 
