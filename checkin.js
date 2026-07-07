@@ -335,17 +335,21 @@ function submitData(){
 
     fetch(
 
-        WEB_APP_URL,
+    WEB_APP_URL,
 
-        {
+    {
 
-            method:"POST",
+        method:"POST",
 
-            body:JSON.stringify(data)
+        headers:{
+            "Content-Type":"application/json"
+        },
 
-        }
+        body:JSON.stringify(data)
 
-    )
+    }
+
+)
 
     .then(response => response.json())
 
@@ -404,7 +408,7 @@ function submitData(){
 function showSuccess(dateTime){
 
     document.getElementById("popupImage").src =
-    "images/success.jpg";
+    "images/SUCCESS.JPG";
 
     document.getElementById("popupTitle").innerHTML =
     "บันทึกข้อมูลเรียบร้อยแล้ว";
@@ -418,9 +422,9 @@ function showSuccess(dateTime){
     document.getElementById("popup").style.display =
     "flex";
 
-    document.getElementById("popupButton").onclick=function(){
+    document.getElementById("popupButton").onclick = function(){
 
-        window.location.href="human.html";
+        window.location.href = "human.html";
 
     };
 
@@ -462,10 +466,10 @@ function showLocationError(){
    ERROR POPUP
 ========================================== */
 
-function showError(title,message){
+function showError(title, message){
 
     document.getElementById("popupImage").src =
-   "images/error.jpg";
+    "images/ERROR.JPG";
 
     document.getElementById("popupTitle").innerHTML =
     title;
@@ -479,15 +483,16 @@ function showError(title,message){
     document.getElementById("popup").style.display =
     "flex";
 
-    document.getElementById("popupButton").onclick=function(){
+    document.getElementById("popupButton").onclick = function(){
 
-        document.getElementById("popup").style.display="none";
+        document.getElementById("popup").style.display =
+        "none";
 
     };
 
-    document.getElementById("reportButton").onclick=function(){
+    document.getElementById("reportButton").onclick = function(){
 
-        window.location.href="report.html";
+        window.location.href = "report.html";
 
     };
 
