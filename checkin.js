@@ -404,7 +404,7 @@ function submitData(){
 function showSuccess(dateTime){
 
     document.getElementById("popupImage").src =
-    "images/success.jpeg";
+    "images/success.jpg";
 
     document.getElementById("popupTitle").innerHTML =
     "บันทึกข้อมูลเรียบร้อยแล้ว";
@@ -465,7 +465,7 @@ function showLocationError(){
 function showError(title,message){
 
     document.getElementById("popupImage").src =
-    "images/error.jpeg";
+   "images/error.jpg";
 
     document.getElementById("popupTitle").innerHTML =
     title;
