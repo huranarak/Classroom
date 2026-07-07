@@ -144,20 +144,24 @@ body{
 }
 
 /* ==========================================
-   MENU
+   MENU CARD
 ========================================== */
 
 .menu-card{
 
-    width:88%;
+    width:100%;
+
+    max-width:340px;
 
     background:#fff;
 
-    border-radius:18px;
+    border-radius:22px;
 
-    padding:14px;
+    padding:16px;
 
     box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    margin:50px auto 0;
 
 }
 
@@ -173,23 +177,25 @@ body{
 
     border-radius:14px;
 
-    padding:13px;
+    padding:12px 14px;
 
-    margin-bottom:10px;
+    margin-top:10px;
 
     cursor:pointer;
 
-    font-size:16px;
-
-    font-weight:600;
-
     transition:.25s;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#000;
 
 }
 
-.btn:last-child{
+.btn:first-child{
 
-    margin-bottom:0;
+    margin-top:0;
 
 }
 
@@ -197,13 +203,17 @@ body{
 
     transform:translateY(-2px);
 
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+
 }
+
+/* ==========================================
+   BUTTON COLOR
+========================================== */
 
 .btn-orange{
 
     background:#FF964A;
-
-    color:#000;
 
 }
 
@@ -211,15 +221,18 @@ body{
 
     background:#FFD34A;
 
-    color:#000;
-
 }
 
 .btn-gray{
 
-    background:#BDBDBD;
+    background:#C4C4C4;
 
-    color:#000;
+}
+
+.btn,
+.btn *{
+
+    color:#000 !important;
 
 }
 
