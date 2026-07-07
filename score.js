@@ -142,25 +142,23 @@ function searchScore(){
    POPUP
 ========================================== */
 
-function showPopup(
+function showPopup(title, message){
 
-    title,
-
-    message
-
-){
+    document
+    .getElementById("popupImage")
+    .src = "images/error.jpg";
 
     document
     .getElementById("popupTitle")
-    .innerHTML=title;
+    .innerHTML = title;
 
     document
     .getElementById("popupMessage")
-    .innerHTML=message;
+    .innerHTML = message;
 
     document
     .getElementById("popup")
-    .style.display="flex";
+    .style.display = "flex";
 
 }
 
