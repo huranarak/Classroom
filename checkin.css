@@ -532,3 +532,19 @@ body{
     opacity:.9;
 
 }
+
+.submit-btn{
+
+    background:#BDBDBD;
+
+    color:#fff;
+
+    transition:.25s;
+
+}
+
+.submit-btn.active{
+
+    background:#66BB6A;
+
+}
