@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>แจ้งปัญหา | CL303353</title>
+
+<link rel="stylesheet" href="report.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- COURSE -->
+
+<div class="course-box">
+
+<h2>CL303353</h2>
+
+<p>
+
+การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
+
+</p>
+
+</div>
+
+<!-- FORM -->
+
+<div class="form-card">
+
+<label>
+
+Email <span>*</span>
+
+</label>
+
+<input
+
+type="email"
+
+id="email"
+
+placeholder="student@kkumail.com">
+
+<label>
+
+ชื่อ-นามสกุล <span>*</span>
+
+</label>
+
+<input
+
+type="text"
+
+id="name"
+
+placeholder="นางสาวโคล่า ซ่าสดชื่น">
+
+<label>
+
+รหัสนักศึกษา <span>*</span>
+
+</label>
+
+<input
+
+type="text"
+
+id="studentId"
+
+placeholder="653280xxx-x"
+
+maxlength="11">
+
+<label>
+
+ประเภทปัญหา <span>*</span>
+
+</label>
+
+<select id="problem">
+
+<option value="">เลือกประเภทปัญหา</option>
+
+<option>เช็คชื่อ</option>
+
+<option>คะแนน</option>
+
+<option>ระบบเว็บไซต์</option>
+
+<option>อื่น ๆ</option>
+
+</select>
+
+<label>
+
+รายละเอียด <span>*</span>
+
+</label>
+
+<textarea
+
+id="detail"
+
+placeholder="โปรดอธิบายปัญหาโดยละเอียด"
+
+rows="5"></textarea>
+
+<label>
+
+แนบรูปภาพ (ไม่บังคับ)
+
+</label>
+
+<input
+
+type="file"
+
+id="image"
+
+accept="image/*">
+
+</div>
+
+<!-- BUTTON -->
+
+<div class="submit-area">
+
+<button
+
+id="submitBtn"
+
+class="submit-btn">
+
+ส่งข้อมูล
+
+</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+By Pichitra K.
+
+</div>
+
+</div>
+
+<!-- POPUP -->
+
+<div
+
+id="popup"
+
+class="popup">
+
+<div class="popup-box">
+
+<img
+
+id="popupImage"
+
+src=""
+
+alt="Popup">
+
+<h2
+
+id="popupTitle">
+
+</h2>
+
+<p
+
+id="popupMessage">
+
+</p>
+
+<button
+
+id="popupButton"
+
+class="ok-btn">
+
+ตกลง
+
+</button>
+
+</div>
+
+</div>
+
+<script src="report.js"></script>
+
+</body>
+
+</html>
