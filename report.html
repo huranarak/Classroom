@@ -3,24 +3,25 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>แจ้งปัญหา | CL303353</title>
+    <title>แจ้งปัญหา | CL303353</title>
 
-<link rel="stylesheet" href="report.css">
+    <link rel="stylesheet"
+          href="report.css">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
 </head>
 
@@ -28,185 +29,253 @@ rel="stylesheet">
 
 <div class="page">
 
-<!-- COURSE -->
+    <!-- ================= COURSE ================= -->
 
-<div class="course-box">
+    <div class="course-box">
 
-<h2>CL303353</h2>
+        <h2>CL303353</h2>
 
-<p>
+        <p>
 
-การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
+            การพัฒนาทุนมนุษย์ในศตวรรษที่ 21
 
-</p>
+        </p>
+
+    </div>
+
+    <!-- ================= STUDENT ================= -->
+
+    <div class="section-card">
+
+        <div class="section-title">
+
+            👤 ข้อมูลนักศึกษา
+
+        </div>
+
+        <div class="form-grid">
+
+            <div>
+
+                <label>
+
+                    Email <span>*</span>
+
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="student@kkumail.com">
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    รหัสนักศึกษา <span>*</span>
+
+                </label>
+
+                <input
+                    type="text"
+                    id="studentId"
+                    maxlength="11"
+                    placeholder="653280xxx-x">
+
+            </div>
+
+            <div class="full">
+
+                <label>
+
+                    ชื่อ-นามสกุล <span>*</span>
+
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="นางสาวโคล่า ซ่าสดชื่น">
+
+            </div>
+
+        </div>
+
+    </div>
+
+      <!-- ================= PROBLEM ================= -->
+
+    <div class="section-card">
+
+        <div class="section-title">
+
+            ⚠️ รายละเอียดปัญหา
+
+        </div>
+
+        <div class="form-grid">
+
+            <div class="full">
+
+                <label>
+
+                    ประเภทปัญหา <span>*</span>
+
+                </label>
+
+                <select id="problem">
+
+                    <option value="">
+
+                        เลือกประเภทปัญหา
+
+                    </option>
+
+                    <option value="checkin">
+
+                        ระบบเช็คชื่อ
+
+                    </option>
+
+                    <option value="score">
+
+                        ระบบตรวจสอบคะแนน
+
+                    </option>
+
+                    <option value="website">
+
+                        ระบบเว็บไซต์
+
+                    </option>
+
+                    <option value="other">
+
+                        อื่น ๆ
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="full">
+
+                <label>
+
+                    รายละเอียดปัญหา <span>*</span>
+
+                </label>
+
+                <textarea
+
+                    id="detail"
+
+                    placeholder="กรุณาอธิบายรายละเอียดของปัญหาให้ชัดเจน เช่น วันที่ เวลา หรือข้อความที่พบ"
+
+                ></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= IMAGE ================= -->
+
+    <div class="section-card">
+
+        <div class="section-title">
+
+            📷 แนบรูปภาพ (ไม่บังคับ)
+
+        </div>
+
+        <div class="file-upload">
+
+            <input
+
+                type="file"
+
+                id="image"
+
+                accept="image/*">
+
+        </div>
+
+    </div>
+
+    <!-- ================= BUTTON ================= -->
+
+    <div class="submit-area">
+
+        <button
+
+            id="submitBtn"
+
+            class="submit-btn"
+
+            disabled>
+
+            ส่งข้อมูล
+
+        </button>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <div class="footer">
+
+        By Pichitra K.
+
+    </div>
 
 </div>
 
-<!-- FORM -->
-
-<div class="form-card">
-
-<label>
-
-Email <span>*</span>
-
-</label>
-
-<input
-
-type="email"
-
-id="email"
-
-placeholder="student@kkumail.com">
-
-<label>
-
-ชื่อ-นามสกุล <span>*</span>
-
-</label>
-
-<input
-
-type="text"
-
-id="name"
-
-placeholder="นางสาวโคล่า ซ่าสดชื่น">
-
-<label>
-
-รหัสนักศึกษา <span>*</span>
-
-</label>
-
-<input
-
-type="text"
-
-id="studentId"
-
-placeholder="653280xxx-x"
-
-maxlength="11">
-
-<label>
-
-ประเภทปัญหา <span>*</span>
-
-</label>
-
-<select id="problem">
-
-<option value="">เลือกประเภทปัญหา</option>
-
-<option>เช็คชื่อ</option>
-
-<option>คะแนน</option>
-
-<option>ระบบเว็บไซต์</option>
-
-<option>อื่น ๆ</option>
-
-</select>
-
-<label>
-
-รายละเอียด <span>*</span>
-
-</label>
-
-<textarea
-
-id="detail"
-
-placeholder="โปรดอธิบายปัญหาโดยละเอียด"
-
-rows="5"></textarea>
-
-<label>
-
-แนบรูปภาพ (ไม่บังคับ)
-
-</label>
-
-<input
-
-type="file"
-
-id="image"
-
-accept="image/*">
-
-</div>
-
-<!-- BUTTON -->
-
-<div class="submit-area">
-
-<button
-
-id="submitBtn"
-
-class="submit-btn">
-
-ส่งข้อมูล
-
-</button>
-
-</div>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-By Pichitra K.
-
-</div>
-
-</div>
-
-<!-- POPUP -->
+<!-- ================= POPUP ================= -->
 
 <div
 
-id="popup"
+    id="popup"
 
-class="popup">
+    class="popup">
 
-<div class="popup-box">
+    <div class="popup-box">
 
-<img
+        <img
 
-id="popupImage"
+            id="popupImage"
 
-src=""
+            src=""
 
-alt="Popup">
+            alt="Popup">
 
-<h2
+        <h2
 
-id="popupTitle">
+            id="popupTitle">
 
-</h2>
+        </h2>
 
-<p
+        <p
 
-id="popupMessage">
+            id="popupMessage">
 
-</p>
+        </p>
 
-<button
+        <button
 
-id="popupButton"
+            id="popupButton"
 
-class="ok-btn">
+            class="ok-btn">
 
-ตกลง
+            ตกลง
 
-</button>
+        </button>
 
-</div>
+    </div>
 
 </div>
 
