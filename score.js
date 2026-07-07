@@ -146,7 +146,7 @@ function showPopup(title, message){
 
     document
     .getElementById("popupImage")
-    .src = "images/error.jpg";
+    .src = "images/ERROR.JPG";
 
     document
     .getElementById("popupTitle")
