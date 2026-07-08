@@ -345,19 +345,11 @@ function submitData(){
 
     };
 
-    fetch(
-
-        WEB_APP_URL,
-
-        {
-
-            method : "POST",
-
-            headers : {
-
-                "Content-Type" : "application/json"
-
-            },
+    fetch(WEB_APP_URL, {
+    method: "POST",
+    body: JSON.stringify(data),
+    mode: "cors"
+})
 
             body : JSON.stringify(data)
 
