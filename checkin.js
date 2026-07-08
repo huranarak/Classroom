@@ -363,32 +363,20 @@ function submitData(){
 
     showSuccess(result.datetime);
 
-}
+}else{
 
-else{
-
-    if(result.message.includes("นอกรัศมี")){
+    if(result.message === "นอกรัศมี"){
 
         showError(
-
             "คุณอยู่นอกรัศมีในการเช็คชื่อ",
-
             "กรุณากลับไปยังห้องเรียน"
-
         );
 
-    }
-
-    else{
+    }else{
 
         showError(
-
             "ไม่สามารถบันทึกข้อมูลได้",
-
-            result.message ||
-
-            "โปรดลองอีกครั้ง"
-
+            result.message || "โปรดลองอีกครั้ง"
         );
 
     }
