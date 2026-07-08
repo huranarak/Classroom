@@ -1,0 +1,689 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    background:#F8F6F0;
+
+    color:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.page{
+
+    width:100%;
+
+    max-width:430px;
+
+    min-height:100vh;
+
+    padding:30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.top-header{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.cola-logo{
+
+    width:130px;
+
+    display:block;
+
+    margin:0 auto;
+
+}
+
+/* ==========================================
+   COURSE CARD
+========================================== */
+
+.course-card{
+
+    width:100%;
+
+    max-width:360px;
+
+    margin-top:40px;
+
+    background:#FFD34A;
+
+    border-radius:22px;
+
+    padding:18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.course-card h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#000;
+
+}
+
+.course-card p{
+
+    margin-top:6px;
+
+    font-size:14px;
+
+    line-height:22px;
+
+    color:#000;
+
+}
+
+/* ==========================================
+   MENU CARD
+========================================== */
+
+.menu-card{
+
+    width:100%;
+
+    max-width:360px;
+
+    margin-top:28px;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    text-align:center;
+
+}
+
+.menu-card h3{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#000;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   MENU BUTTON
+========================================== */
+
+.menu-card button{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.menu-card button+button{
+
+    margin-top:12px;
+
+}
+
+/* ==========================================
+   GRAY BUTTON
+========================================== */
+
+.gray-btn{
+
+    background:#D9D9D9;
+
+    color:#000;
+
+}
+
+.gray-btn:hover{
+
+    background:#C9C9C9;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   GREEN BUTTON
+========================================== */
+
+.green-btn{
+
+    background:#4CAF50;
+
+    color:#FFF;
+
+}
+
+.green-btn:hover{
+
+    background:#43A047;
+
+    transform:translateY(-2px);
+
+}
+
+.gray-btn:active,
+.green-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+   REPORT FORM
+========================================== */
+
+.report-form,
+.status-form{
+
+    width:100%;
+
+    max-width:360px;
+
+    margin-top:28px;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    display:none;
+
+    animation:slideDown .3s ease;
+
+}
+
+/* ==========================================
+   LABEL
+========================================== */
+
+.report-form label,
+.status-form label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#000;
+
+}
+
+.report-form label:first-child,
+.status-form label:first-child{
+
+    margin-top:0;
+
+}
+
+.report-form span,
+.status-form span{
+
+    color:#D32F2F;
+
+}
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.report-form input,
+.status-form input,
+.report-form select,
+.report-form textarea{
+
+    width:100%;
+
+    border:2px solid #E5E5E5;
+
+    border-radius:14px;
+
+    padding:14px 16px;
+
+    font-size:15px;
+
+    background:#FFF;
+
+    color:#000;
+
+    transition:.25s;
+
+}
+
+.report-form input,
+.status-form input,
+.report-form select{
+
+    height:52px;
+
+}
+
+.report-form textarea{
+
+    resize:none;
+
+    min-height:120px;
+
+    line-height:24px;
+
+}
+
+.report-form input::placeholder,
+.status-form input::placeholder,
+.report-form textarea::placeholder{
+
+    color:#A0A0A0;
+
+}
+
+.report-form input:focus,
+.status-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus{
+
+    outline:none;
+
+    border-color:#4CAF50;
+
+    box-shadow:0 0 0 4px rgba(76,175,80,.15);
+
+}
+
+/* ==========================================
+   UPLOAD
+========================================== */
+
+.upload-box{
+
+    width:100%;
+
+    height:54px;
+
+    border:2px dashed #CFCFCF;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    background:#FAFAFA;
+
+}
+
+.upload-box:hover{
+
+    border-color:#4CAF50;
+
+}
+
+.upload-box input{
+
+    display:none;
+
+}
+
+#uploadText{
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+.upload-note{
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    color:#888;
+
+    line-height:22px;
+
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+========================================== */
+
+#submitReport,
+#checkStatus{
+
+    width:100%;
+
+    margin-top:24px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#4CAF50;
+
+    color:#FFF;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#submitReport:hover,
+#checkStatus:hover{
+
+    background:#43A047;
+
+    transform:translateY(-2px);
+
+}
+
+#submitReport:active,
+#checkStatus:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+/* ==========================================
+   POPUP CONTENT
+========================================== */
+
+.popup-content{
+
+    width:90%;
+
+    max-width:360px;
+
+    background:#FFF;
+
+    border-radius:22px;
+
+    padding:28px 24px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+    animation:popup .25s ease;
+
+}
+
+.popup-content img{
+
+    width:120px;
+
+    display:block;
+
+    margin:0 auto 18px;
+
+}
+
+.popup-content h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#000;
+
+    margin-bottom:12px;
+
+}
+
+.popup-content p{
+
+    font-size:15px;
+
+    line-height:26px;
+
+    color:#666;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================================
+   POPUP BUTTON
+========================================== */
+
+#popupButton{
+
+    width:100%;
+
+    height:52px;
+
+    margin-top:24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#4CAF50;
+
+    color:#FFF;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#popupButton:hover{
+
+    background:#43A047;
+
+    transform:translateY(-2px);
+
+}
+
+#popupButton:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    color:#777;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:480px){
+
+    .page{
+
+        padding:24px 18px;
+
+    }
+
+    .cola-logo{
+
+        width:120px;
+
+    }
+
+    .course-card,
+    .menu-card,
+    .report-form,
+    .status-form{
+
+        max-width:100%;
+
+    }
+
+}
