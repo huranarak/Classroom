@@ -617,3 +617,147 @@ footer{
     }
 
 }
+
+/* ==========================================
+   LOCATION POPUP
+========================================== */
+
+#locationPopup{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+#locationPopup .popup-content{
+
+    width:90%;
+
+    max-width:360px;
+
+    background:#FFF;
+
+    border-radius:22px;
+
+    padding:28px 24px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+    animation:popup .25s ease;
+
+}
+
+#locationPopup h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#000;
+
+    margin-bottom:14px;
+
+    line-height:34px;
+
+}
+
+#locationPopup p{
+
+    font-size:15px;
+
+    line-height:24px;
+
+    color:#666;
+
+    margin-bottom:24px;
+
+}
+
+#locationPopup .popup-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+#allowLocation{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#4CAF50;
+
+    color:#FFF;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    padding:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#allowLocation:hover{
+
+    background:#43A047;
+
+}
+
+#cancelLocation{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#D9D9D9;
+
+    color:#000;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    padding:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#cancelLocation:hover{
+
+    background:#C8C8C8;
+
+}
