@@ -22,6 +22,51 @@ window.onload = function(){
     .getElementById("locationPopup")
     .style.display = "flex";
 
+    document
+    .getElementById("photo")
+    .addEventListener("change",function(){
+
+        const text =
+        document.getElementById("uploadText");
+
+        if(this.files.length>0){
+
+            text.innerHTML =
+            "✅ " + this.files[0].name;
+
+        }else{
+
+            text.innerHTML =
+            "📷 เลือกรูปภาพ";
+
+        }
+
+        checkForm();
+
+    });
+
+    document
+    .getElementById("allowLocation")
+    .onclick = function(){
+
+        document
+        .getElementById("locationPopup")
+        .style.display = "none";
+
+        requestLocation();
+
+    };
+
+    document
+    .getElementById("cancelLocation")
+    .onclick = function(){
+
+        document
+        .getElementById("locationPopup")
+        .style.display = "none";
+
+    };
+
     setupStudentId();
 
     setupButton();
@@ -31,7 +76,6 @@ window.onload = function(){
     checkForm();
 
 };
-
 /* ==========================================
    LOCATION
 ========================================== */
@@ -243,46 +287,3 @@ function checkForm(){
     }
 
 }
-
-document
-.getElementById("photo")
-.addEventListener("change",function(){
-
-    const text =
-    document.getElementById("uploadText");
-
-    if(this.files.length>0){
-
-        text.innerHTML =
-        "✅ " + this.files[0].name;
-
-    }else{
-
-        text.innerHTML =
-        "📷 เลือกรูปภาพ";
-
-    }
-
-});
-
-document
-.getElementById("allowLocation")
-.onclick = function(){
-
-    document
-    .getElementById("locationPopup")
-    .style.display = "none";
-
-    requestLocation();
-
-};
-
-document
-.getElementById("cancelLocation")
-.onclick = function(){
-
-    document
-    .getElementById("locationPopup")
-    .style.display = "none";
-
-};
