@@ -359,26 +359,41 @@ function submitData(){
 
         button.innerHTML="บันทึกข้อมูล";
 
-        if(result.success){
+      if(result.success){
 
-            showSuccess(result.datetime);
+    showSuccess(result.datetime);
 
-        }
+}
 
-        else{
+else{
 
-            showError(
+    if(result.message.includes("นอกรัศมี")){
 
-                "ไม่สามารถบันทึกข้อมูลได้",
+        showError(
 
-                result.message ||
+            "คุณอยู่นอกรัศมีในการเช็คชื่อ",
 
-                "โปรดลองอีกครั้ง"
+            "กรุณากลับไปยังห้องเรียน"
 
-            );
+        );
 
-        }
+    }
 
+    else{
+
+        showError(
+
+            "ไม่สามารถบันทึกข้อมูลได้",
+
+            result.message ||
+
+            "โปรดลองอีกครั้ง"
+
+        );
+
+    }
+
+}
     })
 
     .catch(error=>{
