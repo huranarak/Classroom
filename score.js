@@ -6,7 +6,9 @@ const WEB_APP_URL =
 "https://script.google.com/macros/s/AKfycbzyIJribl0ISovWWfdWWdsWQUgpPasMok2E_fqLD2u62VF715IcXWKOJQKCSul0je8EYA/exec";
 
 /* ==========================================
+
    START
+
 ========================================== */
 
 window.onload = function(){
@@ -20,22 +22,27 @@ window.onload = function(){
 };
 
 /* ==========================================
+
    STUDENT ID
+
 ========================================== */
 
 function setupStudentId(){
 
     const input =
+
     document.getElementById("studentId");
 
     input.addEventListener("input",function(){
 
         let value =
+
         input.value.replace(/\D/g,"");
 
         if(value.length>10){
 
             value =
+
             value.substring(0,10);
 
         }
@@ -43,10 +50,15 @@ function setupStudentId(){
         if(value.length>=10){
 
             value =
+
             value.substring(0,9)
+
             +
+
             "-"
+
             +
+
             value.substring(9);
 
         }
@@ -76,19 +88,19 @@ function setupButton(){
 
         if(
 
-            email.value.trim()!=="" &&
+            email.value.trim() !== "" &&
 
-            studentId.value.trim()!==""
+            studentId.value.trim() !== ""
 
         ){
 
-            button.disabled=false;
+            button.disabled = false;
 
         }
 
         else{
 
-            button.disabled=true;
+            button.disabled = true;
 
         }
 
@@ -109,16 +121,12 @@ function setupButton(){
 function setupPopup(){
 
     document
-
     .getElementById("popupButton")
-
-    .onclick=function(){
+    .onclick = function(){
 
         document
-
         .getElementById("popup")
-
-        .style.display="none";
+        .style.display = "none";
 
     };
 
@@ -127,84 +135,155 @@ function setupPopup(){
 function showPopup(image,title,message){
 
     document
-
     .getElementById("popupImage")
-
-    .src=image;
+    .src = image;
 
     document
-
     .getElementById("popupTitle")
-
-    .innerHTML=title;
+    .innerHTML = title;
 
     document
-
     .getElementById("popupMessage")
-
-    .innerHTML=message;
+    .innerHTML = message;
 
     document
-
     .getElementById("popup")
-
-    .style.display="flex";
+    .style.display = "flex";
 
 }
 
 /* ==========================================
-   CHECK SCORE (MOCK)
+   CHECK SCORE
 ========================================== */
 
 document
-
 .getElementById("checkBtn")
-
 .addEventListener("click",function(){
 
-    const email =
-    document.getElementById("email").value.trim();
+    const button =
+    document.getElementById("checkBtn");
 
-    const studentId =
-    document.getElementById("studentId").value.trim();
+    button.disabled = true;
 
-    if(
+    button.innerHTML = "กำลังตรวจสอบ...";
 
-        email==="student@kkumail.com"
+    const data = {
 
-        &&
+        action : "score",
 
-        studentId==="613280123-4"
+        email :
+        document.getElementById("email").value.trim(),
 
-    ){
+        studentId :
+        document.getElementById("studentId").value.trim()
 
-        document
+    };
 
-        .getElementById("loginCard")
+    fetch(
 
-        .style.display="none";
+        WEB_APP_URL,
 
-        document
+        {
 
-        .getElementById("resultPage")
+            method : "POST",
 
-        .style.display="block";
+            headers : {
 
-    }
+                "Content-Type" : "application/json"
 
-    else{
+            },
+
+            body : JSON.stringify(data)
+
+        }
+
+    )
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        button.disabled = false;
+
+        button.innerHTML = "ตรวจสอบข้อมูล";
+
+        if(result.success){
+
+            document
+            .getElementById("loginCard")
+            .style.display = "none";
+
+            document
+            .getElementById("resultPage")
+            .style.display = "block";
+
+            document
+            .getElementById("studentName")
+            .innerHTML =
+            result.fullName;
+
+            document
+            .getElementById("studentIdShow")
+            .innerHTML =
+            result.studentId;
+
+            document
+            .getElementById("attendanceScore")
+            .innerHTML =
+            result.attendanceScore;
+
+            document
+            .getElementById("examScore")
+            .innerHTML =
+            result.examScore;
+
+            document
+            .getElementById("totalScore")
+            .innerHTML =
+            result.totalScore;
+
+            document
+            .getElementById("grade")
+            .innerHTML =
+            result.grade;
+
+        }
+
+        else{
+
+            showPopup(
+
+                "images/ERROR.JPG",
+
+                "กรุณากรอกข้อมูลให้ถูกต้อง",
+
+                "ไม่พบข้อมูลนักศึกษา"
+
+            );
+
+        }
+
+    })
+
+    .catch(error => {
+
+        console.error(error);
+
+        button.disabled = false;
+
+        button.innerHTML = "ตรวจสอบข้อมูล";
 
         showPopup(
 
             "images/ERROR.JPG",
 
-            "กรุณากรอกข้อมูลให้ถูกต้อง",
+            "ไม่สามารถเชื่อมต่อระบบได้",
 
-            "Email หรือรหัสนักศึกษาไม่ถูกต้อง"
+            "กรุณาลองใหม่อีกครั้ง"
 
         );
 
-    }
+    });
 
 });
 
@@ -222,7 +301,7 @@ document
 
         "วิธีการขอตรวจสอบคะแนน",
 
-        "ติดต่อผ่าน Gmail :\n\npichitra.k@kkumail.com\n\nเท่านั้น\n\nโปรดระบุ\n• ชื่อ-สกุล\n• รหัสนักศึกษา\n\nขอตรวจสอบคะแนนในรายวิชา CL303353"
+        "ติดต่อผ่าน Gmail :\n\npichitra.k@kkumail.com\n\nเท่านั้น\n\nโปรดระบุ\n\n• ชื่อ-สกุล\n• รหัสนักศึกษา\n\nขอตรวจสอบคะแนนในรายวิชา CL303353"
 
     );
 
@@ -244,18 +323,33 @@ document
 
 });
 
+/* ==========================================
+   POPUP
+========================================== */
+
 function setupPopup(){
 
     document
     .getElementById("popupButton")
-    .onclick=function(){
+    .addEventListener("click",function(){
 
         document
         .getElementById("popup")
-        .style.display="none";
+        .style.display = "none";
 
-        location.href="human.html";
+        // ถ้าอยู่หน้าผลคะแนน
+        if(
 
-    };
+            document
+            .getElementById("resultPage")
+            .style.display == "block"
+
+        ){
+
+            location.href = "human.html";
+
+        }
+
+    });
 
 }
