@@ -18,7 +18,9 @@ let longitude = null;
 
 window.onload = function(){
 
-    requestLocation();
+    document
+    .getElementById("locationPopup")
+    .style.display = "flex";
 
     setupStudentId();
 
@@ -262,3 +264,25 @@ document
     }
 
 });
+
+document
+.getElementById("allowLocation")
+.onclick = function(){
+
+    document
+    .getElementById("locationPopup")
+    .style.display = "none";
+
+    requestLocation();
+
+};
+
+document
+.getElementById("cancelLocation")
+.onclick = function(){
+
+    document
+    .getElementById("locationPopup")
+    .style.display = "none";
+
+};
