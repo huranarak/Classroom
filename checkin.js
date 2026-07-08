@@ -333,7 +333,7 @@ function submitData(){
 
         email : email,
 
-        fullname : name,
+        fullName : name,
 
         studentId : studentId,
 
