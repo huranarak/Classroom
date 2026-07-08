@@ -393,18 +393,6 @@ function submitData(){
 
             }
 
-            else if(result.message === "CHECKED_IN"){
-
-                showError(
-
-                    "เช็คชื่อแล้ว",
-
-                    "วันนี้คุณเช็คชื่อเรียบร้อยแล้ว"
-
-                );
-
-            }
-
             else{
 
                 showError(
