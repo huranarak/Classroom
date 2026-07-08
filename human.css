@@ -1,0 +1,327 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt',sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+    background:#f8f5ef;
+    color:#222;
+    min-height:100vh;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+    width:100%;
+    max-width:650px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header{
+    background:linear-gradient(135deg,#f9d86d,#f7c948);
+    border-radius:28px;
+    padding:35px 20px;
+    text-align:center;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.header h1{
+    font-size:58px;
+    font-weight:700;
+    color:#000;
+    margin-bottom:8px;
+}
+
+.header h2{
+    font-size:28px;
+    font-weight:600;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card{
+    background:#fff;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   LABEL
+========================================== */
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.required{
+    color:#e53935;
+}
+
+/* ==========================================
+   INPUT
+========================================== */
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:18px 20px;
+    border:2px solid #ececec;
+    border-radius:18px;
+    font-size:18px;
+    transition:.25s;
+    background:#fafafa;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#f7c948;
+    background:#fff;
+}
+
+textarea{
+    min-height:180px;
+    resize:vertical;
+}
+
+/* ==========================================
+   FILE
+========================================== */
+
+input[type=file]{
+    padding:12px;
+    background:#fff;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+    width:100%;
+    margin-top:35px;
+    border:none;
+    border-radius:18px;
+    padding:18px;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+    color:#fff;
+    background:#3ea65c;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:#2f8b49;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+    text-align:center;
+    margin:30px 0;
+    color:#777;
+    font-size:18px;
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    width:90%;
+    max-width:520px;
+    background:#fff;
+    border-radius:28px;
+    padding:40px 30px;
+    text-align:center;
+    animation:popup .25s ease;
+}
+
+.popup-content img{
+    width:170px;
+    margin-bottom:20px;
+}
+
+.popup-content h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.popup-content p{
+    font-size:24px;
+    color:#666;
+    line-height:1.7;
+}
+
+.popup-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+}
+
+.popup-buttons button{
+    flex:1;
+    margin:0;
+}
+
+.report-btn{
+    background:#6cc16d;
+}
+
+.ok-btn{
+    background:#6cc16d;
+}
+
+.report-btn:hover,
+.ok-btn:hover{
+    background:#4fa858;
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.8);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .container{
+
+        margin:20px auto;
+
+    }
+
+    .header{
+
+        padding:28px 15px;
+
+    }
+
+    .header h1{
+
+        font-size:48px;
+
+    }
+
+    .header h2{
+
+        font-size:22px;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    label{
+
+        font-size:18px;
+
+    }
+
+    input,
+    select,
+    textarea{
+
+        font-size:17px;
+
+        padding:16px;
+
+    }
+
+    button{
+
+        font-size:20px;
+
+    }
+
+    .popup-content{
+
+        padding:30px 20px;
+
+    }
+
+    .popup-content img{
+
+        width:140px;
+
+    }
+
+    .popup-content h2{
+
+        font-size:34px;
+
+    }
+
+    .popup-content p{
+
+        font-size:20px;
+
+    }
+
+}
