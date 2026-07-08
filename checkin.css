@@ -255,27 +255,68 @@ select{
    FILE
 ========================================== */
 
-input[type="file"]{
+/* ==========================================
+   UPLOAD
+========================================== */
 
-    height:auto;
+.upload-box{
 
-    padding:14px;
+    width:100%;
+    height:68px;
+
+    border:2px dashed #D8D8D8;
+
+    border-radius:18px;
+
+    background:#FAFAFA;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     cursor:pointer;
 
+    transition:.25s;
+
 }
 
-small{
+.upload-box:hover{
 
-    display:block;
+    border-color:#FFD34A;
 
-    margin-top:8px;
+    background:#FFFDF5;
+
+}
+
+.upload-box input{
+
+    display:none;
+
+}
+
+.upload-box span{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#666;
+
+}
+
+.upload-note{
+
+    margin-top:14px;
+
+    text-align:center;
+
+    font-size:14px;
 
     color:#888;
 
-    font-size:13px;
-
-    line-height:20px;
+    line-height:22px;
 
 }
 
