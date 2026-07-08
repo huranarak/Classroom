@@ -241,3 +241,24 @@ function checkForm(){
     }
 
 }
+
+document
+.getElementById("photo")
+.addEventListener("change",function(){
+
+    const text =
+    document.getElementById("uploadText");
+
+    if(this.files.length>0){
+
+        text.innerHTML =
+        "✅ " + this.files[0].name;
+
+    }else{
+
+        text.innerHTML =
+        "📷 เลือกรูปภาพ";
+
+    }
+
+});
