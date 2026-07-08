@@ -1,4 +1,11 @@
 /* ==========================================
+   CONFIG
+========================================== */
+
+const WEB_APP_URL =
+"https://script.google.com/macros/s/AKfycbwBRkFGgdmcMZ8E1UHAIkskmu_6iAvLpgoiywGXh28I-mwoJ0hRW7sm__sSR0Ow_VhR/exec";
+
+/* ==========================================
    START
 ========================================== */
 
