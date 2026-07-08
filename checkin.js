@@ -3,7 +3,7 @@
 ========================================== */
 
 const WEB_APP_URL =
-"ใส่ URL Apps Script ของคุณ";
+"https://script.google.com/macros/s/AKfycbzyIJribl0ISovWWfdWWdsWQUgpPasMok2E_fqLD2u62VF715IcXWKOJQKCSul0je8EYA/exec";
 
 /* ==========================================
    VARIABLE
