@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>353 Check In</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="353CheckIn.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="page-title">
+
+        เช็คชื่อเข้าเรียน
+
+    </div>
+
+    <!-- ================= FORM ================= -->
+
+    <div class="card">
+
+        <!-- EMAIL -->
+
+        <div class="input-group">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="student@kkumail.com">
+
+        </div>
+
+        <!-- NAME -->
+
+        <div class="input-group">
+
+            <label>ชื่อ - สกุล</label>
+
+            <input
+                type="text"
+                id="fullname"
+                placeholder="นางสาวโคล่า สดใสน่ารัก">
+
+        </div>
+
+        <!-- STUDENT ID -->
+
+        <div class="input-group">
+
+            <label>รหัสนักศึกษา</label>
+
+            <input
+                type="text"
+                id="studentid"
+                maxlength="11"
+                placeholder="613280xxx-x">
+
+        </div>
+
+        <!-- MAJOR -->
+
+        <div class="input-group">
+
+            <label>สาขา</label>
+
+            <select id="major">
+
+                <option value="">เลือกสาขา</option>
+
+                <option>GPA</option>
+
+                <option>FFM</option>
+
+                <option>UMT</option>
+
+            </select>
+
+        </div>
+
+        <!-- LOCATION -->
+
+        <div class="input-group">
+
+            <label>ตำแหน่งที่ตั้ง</label>
+
+            <div
+                id="locationStatus"
+                class="location red">
+
+                🔴 ไม่อนุญาตให้เข้าถึงตำแหน่งที่ตั้ง
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= PHOTO ================= -->
+
+    <div class="upload-card">
+
+        <label class="upload-box">
+
+            <input
+                type="file"
+                id="photo"
+                accept="image/*"
+                capture="environment"
+                hidden>
+
+            <div id="previewArea">
+
+                <div class="camera">
+
+                    📷
+
+                </div>
+
+                <div class="upload-text">
+
+                    กรุณาถ่ายให้เห็นผู้สอน<br>
+
+                    หรือผู้ช่วยเท่านั้น ‼️
+
+                </div>
+
+            </div>
+
+        </label>
+
+    </div>
+
+    <!-- ================= BUTTON ================= -->
+
+    <button
+        id="saveBtn"
+        class="save-btn">
+
+        บันทึก
+
+    </button>
+
+</div>
+
+<!-- ================= LOCATION POPUP ================= -->
+
+<div
+    id="locationPopup"
+    class="popup">
+
+    <div class="popup-box">
+
+        <h2>
+
+            อนุญาตให้เข้าถึงตำแหน่งที่ตั้ง
+
+        </h2>
+
+        <p>
+
+            กรุณาอนุญาตการเข้าถึงตำแหน่งที่ตั้งก่อนเช็คชื่อ
+
+        </p>
+
+        <div class="popup-button">
+
+            <button
+                class="green"
+                id="allowLocation">
+
+                อนุญาต
+
+            </button>
+
+            <button
+                class="gray"
+                id="denyLocation">
+
+                ไม่อนุญาต
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= SUCCESS ================= -->
+
+<div
+    id="successPopup"
+    class="popup">
+
+    <div class="popup-box">
+
+        <img
+            src="success.jpg"
+            class="popup-image">
+
+        <h2>
+
+            บันทึกข้อมูลสำเร็จ
+
+        </h2>
+
+        <p id="saveTime">
+
+            เวลา
+
+        </p>
+
+        <button
+            class="green"
+            id="successClose">
+
+            ปิด
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= ERROR ================= -->
+
+<div
+    id="errorPopup"
+    class="popup">
+
+    <div class="popup-box">
+
+        <img
+            src="error.jpg"
+            class="popup-image">
+
+        <h2>
+
+            ไม่สามารถบันทึกข้อมูลได้
+
+        </h2>
+
+        <p>
+
+            กรุณาลองอีกครั้ง
+
+        </p>
+
+        <div class="popup-button">
+
+            <button
+                class="green"
+                id="errorClose">
+
+                ตกลง
+
+            </button>
+
+            <button
+                class="orange"
+                id="gotoReport">
+
+                รายงาน
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= REPORT ================= -->
+
+<div
+    id="reportPopup"
+    class="popup">
+
+    <div class="popup-box">
+
+        <img
+            src="report.png"
+            class="popup-image">
+
+        <h2>
+
+            ‼️ กรุณาอ่านก่อนปิดแท็บนี้ ‼️
+
+        </h2>
+
+        <p>
+
+            หากมีปัญหาในการใช้งาน
+
+            <br><br>
+
+            กรุณาบันทึกหน้าจอก่อนรายงาน
+
+        </p>
+
+        <button
+            class="green"
+            onclick="window.location.href='353Report.html'">
+
+            กลับหน้ารายวิชา
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="353CheckIn.js"></script>
+
+</body>
+</html>
