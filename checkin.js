@@ -274,3 +274,292 @@ function checkForm(){
     }
 
 }
+
+/* ==========================================
+   SUBMIT DATA
+========================================== */
+
+function submitData(){
+
+    const button =
+    document.getElementById("submitBtn");
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const studentId =
+    document.getElementById("studentId").value.trim();
+
+    const major =
+    document.getElementById("major").value;
+
+    const photo =
+    document.getElementById("photo").files[0];
+
+    if(
+
+        email === "" ||
+
+        name === "" ||
+
+        studentId === "" ||
+
+        major === "" ||
+
+        !photo ||
+
+        latitude === null ||
+
+        longitude === null
+
+    ){
+
+        showWarning();
+
+        return;
+
+    }
+
+    button.disabled = true;
+
+    button.innerHTML = "กำลังบันทึกข้อมูล...";
+
+    const data = {
+
+        action : "checkin",
+
+        email : email,
+
+        name : name,
+
+        studentId : studentId,
+
+        major : major,
+
+        latitude : latitude,
+
+        longitude : longitude
+
+    };
+
+    fetch(
+
+        WEB_APP_URL,
+
+        {
+
+            method : "POST",
+
+            headers : {
+
+                "Content-Type" : "application/json"
+
+            },
+
+            body : JSON.stringify(data)
+
+        }
+
+    )
+
+    .then(response => response.json())
+
+    .then(result => {
+
+        button.disabled = false;
+
+        button.innerHTML = "บันทึกข้อมูล";
+
+        if(result.success){
+
+            showSuccess(result.datetime);
+
+        }
+
+        else{
+
+            if(result.message === "OUT_OF_RANGE"){
+
+                showError(
+
+                    "อยู่นอกรัศมีการเช็คชื่อ",
+
+                    "กรุณาอยู่ภายในห้องเรียนก่อนบันทึกข้อมูล"
+
+                );
+
+            }
+
+            else if(result.message === "CHECKED_IN"){
+
+                showError(
+
+                    "เช็คชื่อแล้ว",
+
+                    "วันนี้คุณเช็คชื่อเรียบร้อยแล้ว"
+
+                );
+
+            }
+
+            else{
+
+                showError(
+
+                    "ไม่สามารถบันทึกข้อมูลได้",
+
+                    result.message || "โปรดลองอีกครั้ง"
+
+                );
+
+            }
+
+        }
+
+    })
+
+    .catch(error => {
+
+        console.error(error);
+
+        button.disabled = false;
+
+        button.innerHTML = "บันทึกข้อมูล";
+
+        showError(
+
+            "ไม่สามารถบันทึกข้อมูลได้",
+
+            "กรุณาลองใหม่อีกครั้ง หากยังไม่สามารถบันทึกได้ กรุณาแจ้งปัญหาการใช้งาน"
+
+        );
+
+    });
+
+}
+
+/* ==========================================
+   SUCCESS POPUP
+========================================== */
+
+function showSuccess(dateTime){
+
+    document.getElementById("popupImage").src =
+    "images/SUCCESS.JPG";
+
+    document.getElementById("popupTitle").innerHTML =
+    "บันทึกข้อมูลเรียบร้อยแล้ว";
+
+    document.getElementById("popupMessage").innerHTML =
+    "เวลาที่บันทึก :<br><b>" + dateTime + "</b>";
+
+    document.getElementById("reportButton").style.display =
+    "none";
+
+    document.getElementById("popup").style.display =
+    "flex";
+
+    document.getElementById("popupButton").innerHTML =
+    "ตกลง";
+
+    document.getElementById("popupButton").onclick =
+    function(){
+
+        window.location.href =
+        "human.html";
+
+    };
+
+}
+
+/* ==========================================
+   ERROR POPUP
+========================================== */
+
+function showError(title,message){
+
+    document.getElementById("popupImage").src =
+    "images/ERROR.JPG";
+
+    document.getElementById("popupTitle").innerHTML =
+    title;
+
+    document.getElementById("popupMessage").innerHTML =
+    message;
+
+    document.getElementById("reportButton").style.display =
+    "block";
+
+    document.getElementById("popup").style.display =
+    "flex";
+
+    document.getElementById("popupButton").innerHTML =
+    "ตกลง";
+
+    document.getElementById("popupButton").onclick =
+    function(){
+
+        document.getElementById("popup").style.display =
+        "none";
+
+    };
+
+    document.getElementById("reportButton").onclick =
+    function(){
+
+        document.getElementById("popup").style.display =
+        "none";
+
+        document.getElementById("reportPopup").style.display =
+        "flex";
+
+    };
+
+}
+
+/* ==========================================
+   WARNING
+========================================== */
+
+function showWarning(){
+
+    showError(
+
+        "กรุณากรอกข้อมูลให้ครบ",
+
+        "กรุณากรอกข้อมูลทุกช่องก่อนบันทึกข้อมูล"
+
+    );
+
+}
+
+/* ==========================================
+   LOCATION ERROR
+========================================== */
+
+function showLocationError(){
+
+    showError(
+
+        "ไม่พบตำแหน่งที่ตั้ง",
+
+        "กรุณาอนุญาตการเข้าถึงตำแหน่งที่ตั้ง แล้วลองใหม่อีกครั้ง"
+
+    );
+
+}
+
+/* ==========================================
+   CLOSE REPORT
+========================================== */
+
+document.getElementById("closeReport").onclick = function(){
+
+    document.getElementById("reportPopup").style.display = "none";
+
+    window.location.href = "human.html";
+
+};
