@@ -1,239 +1,477 @@
-/* ==========================================
-   CONFIG
-========================================== */
+/* ==========================================================
+   353CheckIn.js
+   Part 1
+========================================================== */
 
 const WEB_APP_URL =
 "https://script.google.com/macros/s/AKfycbwxIYLgmiyFvpaggmosKeor20zscCmE7nKIGYhuBhZjhRhxHfjhIskJN0y1CWlPIYwE/exec";
 
-/* ==========================================
-   VARIABLE
-========================================== */
-
-let latitude = "";
-let longitude = "";
-let photoFile = null;
-
-/* ==========================================
+/* ==========================================================
    ELEMENT
-========================================== */
+========================================================== */
 
-const locationPopup = document.getElementById("locationPopup");
-const allowLocation = document.getElementById("allowLocation");
-const denyLocation = document.getElementById("denyLocation");
-
-const locationStatus = document.getElementById("locationStatus");
-
-const saveBtn = document.getElementById("saveBtn");
+const email = document.getElementById("email");
+const fullname = document.getElementById("fullname");
+const studentid = document.getElementById("studentid");
+const major = document.getElementById("major");
 
 const photo = document.getElementById("photo");
 const previewArea = document.getElementById("previewArea");
 
-const successPopup = document.getElementById("successPopup");
-const errorPopup = document.getElementById("errorPopup");
-const reportPopup = document.getElementById("reportPopup");
+const saveBtn = document.getElementById("saveBtn");
 
-/* ==========================================
-   SHOW LOCATION POPUP
-========================================== */
+const locationStatus =
+document.getElementById("locationStatus");
 
-window.onload = () => {
+/* Popup */
 
-    locationPopup.style.display = "flex";
+const locationPopup =
+document.getElementById("locationPopup");
 
-};
+const successPopup =
+document.getElementById("successPopup");
 
-/* ==========================================
+const errorPopup =
+document.getElementById("errorPopup");
+
+const reportPopup =
+document.getElementById("reportPopup");
+
+const saveTime =
+document.getElementById("saveTime");
+
+/* ==========================================================
+   VARIABLE
+========================================================== */
+
+let latitude = "";
+let longitude = "";
+let photoBase64 = "";
+
+/* ==========================================================
+   POPUP
+========================================================== */
+
+function openPopup(id){
+
+    document
+    .getElementById(id)
+    .classList
+    .add("active");
+
+}
+
+function closePopup(id){
+
+    document
+    .getElementById(id)
+    .classList
+    .remove("active");
+
+}
+
+/* ==========================================================
+   START
+========================================================== */
+
+window.onload=()=>{
+
+    openPopup("locationPopup");
+
+}
+
+/* ==========================================================
    GPS
-========================================== */
+========================================================== */
 
-allowLocation.onclick = () => {
+document
+.getElementById("allowLocation")
+.addEventListener("click",()=>{
+
+    if(!navigator.geolocation){
+
+        alert("อุปกรณ์ไม่รองรับ GPS");
+
+        return;
+
+    }
 
     navigator.geolocation.getCurrentPosition(
 
-        success,
+        gpsSuccess,
 
-        error,
+        gpsError,
 
         {
-            enableHighAccuracy:true
+
+            enableHighAccuracy:true,
+
+            timeout:10000,
+
+            maximumAge:0
+
         }
 
     );
 
-};
+});
 
-denyLocation.onclick = () => {
+document
+.getElementById("denyLocation")
+.addEventListener("click",()=>{
 
-    locationPopup.style.display = "none";
+    closePopup("locationPopup");
 
-};
+});
 
-function success(position){
+function gpsSuccess(position){
 
-    latitude = position.coords.latitude;
+    latitude=position.coords.latitude;
 
-    longitude = position.coords.longitude;
+    longitude=position.coords.longitude;
 
     locationStatus.classList.remove("red");
 
     locationStatus.classList.add("green");
 
-    locationStatus.innerHTML =
+    locationStatus.innerHTML=
     "🟢 อนุญาตให้เข้าถึงตำแหน่งที่ตั้งแล้ว";
 
-    locationPopup.style.display = "none";
+    closePopup("locationPopup");
 
 }
 
-function error(){
+function gpsError(){
 
-    locationPopup.style.display = "none";
+    locationStatus.classList.remove("green");
+
+    locationStatus.classList.add("red");
+
+    locationStatus.innerHTML=
+    "🔴 ไม่สามารถเข้าถึงตำแหน่งที่ตั้ง";
+
+    closePopup("locationPopup");
 
 }
 
-/* ==========================================
-   PHOTO
-========================================== */
+/* ==========================================================
+   STUDENT ID
+========================================================== */
 
-photo.addEventListener("change",(e)=>{
+studentid.addEventListener("input",()=>{
 
-    photoFile = e.target.files[0];
+    let value=studentid.value;
 
-    if(!photoFile) return;
+    value=value.replace(/[^0-9]/g,"");
 
-    const reader = new FileReader();
+    if(value.length>9){
 
-    reader.onload = function(event){
-
-        previewArea.innerHTML =
-
-        `<img src="${event.target.result}">`;
+        value=value.substring(0,9)+"-"+value.substring(9,10);
 
     }
 
-    reader.readAsDataURL(photoFile);
+    studentid.value=value;
 
 });
 
-/* ==========================================
-   SAVE
-========================================== */
+/* ==========================================================
+   EMAIL
+========================================================== */
 
-saveBtn.onclick = async ()=>{
+function checkEmail(){
 
-    if(latitude==""){
-
-        errorPopup.style.display="flex";
-
-        return;
-
-    }
-
-    if(photoFile==null){
-
-        alert("กรุณาแนบรูปภาพ");
-
-        return;
-
-    }
-
-    saveBtn.disabled=true;
-
-    saveBtn.innerHTML="กำลังบันทึก...";
-
-    const formData = new FormData();
-
-    formData.append("email",
-    document.getElementById("email").value);
-
-    formData.append("fullname",
-    document.getElementById("fullname").value);
-
-    formData.append("studentid",
-    document.getElementById("studentid").value);
-
-    formData.append("major",
-    document.getElementById("major").value);
-
-    formData.append("latitude",
-    latitude);
-
-    formData.append("longitude",
-    longitude);
-
-    formData.append("photo",
-    photoFile);
-
-    try{
-
-        const response = await fetch(
-
-            WEB_APP_URL,
-
-            {
-
-                method:"POST",
-
-                body:formData
-
-            }
-
-        );
-
-        const result = await response.text();
-
-        console.log(result);
-
-        const now = new Date();
-
-        document.getElementById("saveTime").innerHTML =
-
-        now.toLocaleDateString("th-TH")+
-
-        "<br>"+
-
-        now.toLocaleTimeString("th-TH");
-
-        successPopup.style.display="flex";
-
-    }
-
-    catch(e){
-
-        errorPopup.style.display="flex";
-
-    }
-
-    saveBtn.disabled=false;
-
-    saveBtn.innerHTML="บันทึก";
+    return email.value
+    .trim()
+    .toLowerCase()
+    .endsWith("@kkumail.com");
 
 }
 
-/* ==========================================
+/* ==========================================================
+   PHOTO
+========================================================== */
+
+photo.addEventListener("change",(event)=>{
+
+    const file=event.target.files[0];
+
+    if(!file) return;
+
+    const reader=new FileReader();
+
+    reader.onload=function(e){
+
+        photoBase64=e.target.result
+        .split(",")[1];
+
+        previewArea.innerHTML=
+
+        `
+        <img
+        src="${e.target.result}"
+        style="
+        width:100%;
+        border-radius:15px;
+        ">
+        `;
+
+    }
+
+    reader.readAsDataURL(file);
+
+});
+
+/* ==========================================================
+   VALIDATE
+========================================================== */
+
+function validateForm(){
+
+    if(email.value==""){
+
+        alert("กรุณากรอก Email");
+
+        return false;
+
+    }
+
+    if(!checkEmail()){
+
+        alert("กรุณาใช้ KKU Mail");
+
+        return false;
+
+    }
+
+    if(fullname.value==""){
+
+        alert("กรุณากรอกชื่อ");
+
+        return false;
+
+    }
+
+    if(studentid.value.length!=11){
+
+        alert("รหัสนักศึกษาไม่ถูกต้อง");
+
+        return false;
+
+    }
+
+    if(major.value==""){
+
+        alert("กรุณาเลือกสาขา");
+
+        return false;
+
+    }
+
+    if(latitude==""){
+
+        openPopup("errorPopup");
+
+        return false;
+
+    }
+
+    if(photoBase64==""){
+
+        alert("กรุณาแนบรูปภาพ");
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+/* ==========================================================
+   SAVE
+========================================================== */
+
+saveBtn.addEventListener("click", async () => {
+
+    if (!validateForm()) return;
+
+    saveBtn.disabled = true;
+    saveBtn.innerHTML = "กำลังบันทึก...";
+
+    const data = {
+
+        email: email.value.trim(),
+
+        fullname: fullname.value.trim(),
+
+        studentid: studentid.value.trim(),
+
+        major: major.value,
+
+        latitude: latitude,
+
+        longitude: longitude,
+
+        photo: photoBase64
+
+    };
+
+    try {
+
+        const response = await fetch(WEB_APP_URL, {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type": "application/json"
+
+            },
+
+            body: JSON.stringify(data)
+
+        });
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+
+            const now = new Date();
+
+            saveTime.innerHTML =
+
+                now.toLocaleDateString("th-TH") +
+
+                "<br>" +
+
+                now.toLocaleTimeString("th-TH");
+
+            openPopup("successPopup");
+
+        } else {
+
+            console.log(result);
+
+            openPopup("errorPopup");
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.log(error);
+
+        openPopup("errorPopup");
+
+    }
+
+    saveBtn.disabled = false;
+
+    saveBtn.innerHTML = "บันทึก";
+
+});
+
+/* ==========================================================
    SUCCESS
-========================================== */
+========================================================== */
 
-document.getElementById("successClose").onclick=()=>{
+document
+.getElementById("successClose")
+.addEventListener("click", () => {
 
-    window.location.href="Human.html";
+    window.location.href = "Human.html";
 
-};
+});
 
-/* ==========================================
+/* ==========================================================
    ERROR
-========================================== */
+========================================================== */
 
-document.getElementById("errorClose").onclick=()=>{
+document
+.getElementById("errorClose")
+.addEventListener("click", () => {
 
-    errorPopup.style.display="none";
+    closePopup("errorPopup");
 
-};
+});
 
-document.getElementById("gotoReport").onclick=()=>{
+document
+.getElementById("gotoReport")
+.addEventListener("click", () => {
 
-    errorPopup.style.display="none";
+    closePopup("errorPopup");
 
-    reportPopup.style.display="flex";
+    openPopup("reportPopup");
 
-};
+});
+
+/* ==========================================================
+   REPORT
+========================================================== */
+
+document
+.getElementById("closeReport")
+.addEventListener("click", () => {
+
+    window.location.href = "353Report.html";
+
+});
+
+/* ==========================================================
+   CLICK OUTSIDE POPUP
+========================================================== */
+
+window.addEventListener("click", (event) => {
+
+    document.querySelectorAll(".popup").forEach((popup) => {
+
+        if (event.target === popup) {
+
+            popup.classList.remove("active");
+
+        }
+
+    });
+
+});
+
+/* ==========================================================
+   ENTER KEY
+========================================================== */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        saveBtn.click();
+
+    }
+
+});
+
+/* ==========================================================
+   PREVENT DOUBLE CLICK
+========================================================== */
+
+let isSaving = false;
+
+saveBtn.addEventListener("click", () => {
+
+    if (isSaving) return;
+
+    isSaving = true;
+
+    setTimeout(() => {
+
+        isSaving = false;
+
+    }, 3000);
+
+});
+
+/* ==========================================================
+   END
+========================================================== */
