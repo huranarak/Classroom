@@ -180,7 +180,7 @@ function showPopup(image,title,message,buttonText){
 }
 
 /* ==========================================
-   SUBMIT REPORT (MOCK)
+   SUBMIT REPORT
 ========================================== */
 
 document
@@ -199,100 +199,191 @@ document
     const issueType =
     document.getElementById("issueType").value;
 
-    if(
+    const description =
+    document.getElementById("description").value.trim();
 
-        email==="" ||
+    const data = {
 
-        fullName==="" ||
+        action : "report",
 
-        studentId==="" ||
+        email : email,
 
-        issueType===""
+        fullName : fullName,
 
-    ){
+        studentId : studentId,
+
+        issueType : issueType,
+
+        description : description
+
+    };
+
+    fetch(
+
+        WEB_APP_URL,
+
+        {
+
+            method : "POST",
+
+            headers : {
+
+                "Content-Type":"application/json"
+
+            },
+
+            body : JSON.stringify(data)
+
+        }
+
+    )
+
+    .then(response=>response.json())
+
+    .then(result=>{
+
+        if(result.success){
+
+            showPopup(
+
+                "images/SUCCESS.JPG",
+
+                "ส่งข้อมูลเรียบร้อย",
+
+                "คำร้องของคุณถูกส่งเข้าสู่ระบบแล้ว",
+
+                "ปิด"
+
+            );
+
+        }
+
+        else{
+
+            showPopup(
+
+                "images/ERROR.JPG",
+
+                "เกิดข้อผิดพลาด",
+
+                result.message,
+
+                "ตกลง"
+
+            );
+
+        }
+
+    })
+
+    .catch(error=>{
+
+        console.error(error);
 
         showPopup(
 
             "images/ERROR.JPG",
 
-            "กรุณากรอกข้อมูลให้ครบถ้วน",
+            "ไม่สามารถเชื่อมต่อระบบได้",
 
-            "โปรดตรวจสอบข้อมูลก่อนส่ง",
+            "กรุณาลองใหม่อีกครั้ง",
 
             "ตกลง"
 
         );
 
-        return;
-
-    }
-
-    showPopup(
-
-        "images/SUCCESS.JPG",
-
-        "ส่งข้อมูลเรียบร้อย",
-
-        "คำร้องของคุณถูกส่งเข้าสู่ระบบแล้ว",
-
-        "ปิด"
-
-    );
+    });
 
 });
 
 /* ==========================================
-   CHECK STATUS (MOCK)
+   CHECK STATUS
 ========================================== */
 
 document
 .getElementById("checkStatus")
 .addEventListener("click",function(){
 
-    const email =
-    document.getElementById("statusEmail").value.trim();
+    const data = {
 
-    const studentId =
-    document.getElementById("statusStudentId").value.trim();
+        action : "reportStatus",
 
-    if(
+        email :
 
-        email==="student@kkumail.com"
+        document
+        .getElementById("statusEmail")
+        .value.trim(),
 
-        &&
+        studentId :
 
-        studentId==="613280123-4"
+        document
+        .getElementById("statusStudentId")
+        .value.trim()
 
-    ){
+    };
 
-        showPopup(
+    fetch(
 
-            "images/SUCCESS.JPG",
+        WEB_APP_URL,
 
-            "Completed",
+        {
 
-            "ข้อความจากผู้ดูแลระบบ\n\nเพิ่มคะแนนเช็คชื่อเรียบร้อยแล้ว",
+            method:"POST",
 
-            "ปิด"
+            headers:{
 
-        );
+                "Content-Type":"application/json"
 
-    }
+            },
 
-    else{
+            body:JSON.stringify(data)
 
-        showPopup(
+        }
 
-            "images/ERROR.JPG",
+    )
 
-            "ไม่พบข้อมูล",
+    .then(response=>response.json())
 
-            "กรุณาตรวจสอบ Email และรหัสนักศึกษา",
+    .then(result=>{
 
-            "ปิด"
+        if(result.success){
 
-        );
+            showPopup(
 
-    }
+                "images/SUCCESS.JPG",
+
+                result.status,
+
+                result.adminMessage,
+
+                "ปิด"
+
+            );
+
+        }
+
+        else{
+
+            showPopup(
+
+                "images/ERROR.JPG",
+
+                "ไม่พบข้อมูล",
+
+                "กรุณาตรวจสอบ Email และรหัสนักศึกษา",
+
+                "ปิด"
+
+            );
+
+        }
+
+    })
+
+    .catch(error=>{
+
+        console.error(error);
+
+    });
 
 });
