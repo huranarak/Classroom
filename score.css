@@ -344,3 +344,144 @@ a:visited{
     }
 
 }
+
+
+/* ==========================================
+   RESULT PAGE
+========================================== */
+
+.result-page{
+
+    width:100%;
+
+    max-width:360px;
+
+    margin-top:28px;
+
+    display:none;
+
+}
+
+/* ==========================================
+   STUDENT CARD
+========================================== */
+
+.student-card{
+
+    background:#DDEEFF;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.student-card h3{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#000;
+
+    margin-bottom:8px;
+
+}
+
+.student-card p{
+
+    font-size:16px;
+
+    font-weight:500;
+
+    color:#333;
+
+}
+
+/* ==========================================
+   SCORE CARD
+========================================== */
+
+.score-card{
+
+    margin-top:20px;
+
+    background:#FFF;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   SCORE ROW
+========================================== */
+
+.score-row{
+
+    margin-bottom:18px;
+
+}
+
+.score-row:last-child{
+
+    margin-bottom:0;
+
+}
+
+.score-row label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#000;
+
+}
+
+/* ==========================================
+   SCORE BOX
+========================================== */
+
+.score-box{
+
+    width:100%;
+
+    min-height:50px;
+
+    background:#F5F5F5;
+
+    border:2px solid #E5E5E5;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#000;
+
+}
+
+.grade-box{
+
+    font-size:24px;
+
+}
