@@ -1,0 +1,274 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    background:#F8F6F0;
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+    color:#000;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:430px;
+
+    padding:30px 20px 40px;
+
+}
+
+/* ==========================================
+   PAGE TITLE
+========================================== */
+
+.page-title{
+
+    width:100%;
+
+    background:#FFD34A;
+
+    padding:14px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.input-group{
+
+    margin-bottom:18px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:1px solid #ddd;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    outline:none;
+
+    background:#fff;
+
+}
+
+input:focus,
+select:focus{
+
+    border:2px solid #FFD34A;
+
+}
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+.location{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.location.red{
+
+    background:#FFE5E5;
+
+    color:#D10000;
+
+}
+
+.location.green{
+
+    background:#E6FFE9;
+
+    color:#0A8A1F;
+
+}
+
+/* ==========================================
+   UPLOAD
+========================================== */
+
+.upload-card{
+
+    margin-top:25px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.upload-box{
+
+    display:block;
+
+    border:2px dashed #BDBDBD;
+
+    border-radius:18px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+}
+
+.camera{
+
+    font-size:55px;
+
+}
+
+.upload-text{
+
+    margin-top:18px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    line-height:28px;
+
+}
+
+#previewArea img{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.save-btn{
+
+    width:100%;
+
+    margin-top:30px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#FFD34A;
+
+    color:#000;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(
