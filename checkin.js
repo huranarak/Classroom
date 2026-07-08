@@ -365,21 +365,26 @@ function submitData(){
 
 }else{
 
-    if(result.message === "นอกรัศมี"){
+    if(result.message === "OUT_OF_RANGE"){
 
-        showError(
-            "คุณอยู่นอกรัศมีในการเช็คชื่อ",
-            "กรุณากลับไปยังห้องเรียน"
-        );
+    showError(
+        "คุณอยู่นอกรัศมีในการเช็คชื่อ",
+        "กรุณากลับไปยังห้องเรียน"
+    );
 
-    }else{
+}else if(result.message === "CHECKED_IN"){
 
-        showError(
-            "ไม่สามารถบันทึกข้อมูลได้",
-            result.message || "โปรดลองอีกครั้ง"
-        );
+    showError(
+        "เช็คชื่อแล้ว",
+        "วันนี้คุณเช็คชื่อเรียบร้อยแล้ว"
+    );
 
-    }
+}else{
+
+    showError(
+        "ไม่สามารถบันทึกข้อมูลได้",
+        result.message || "โปรดลองอีกครั้ง"
+    );
 
 }
     })
