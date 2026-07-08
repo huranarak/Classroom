@@ -94,11 +94,238 @@
 
     </section>
 
+    <!-- ================= REPORT FORM ================= -->
+
+<section
+    class="report-form"
+    id="reportForm">
+
+    <!-- Email -->
+
+    <label>
+
+        Email <span>*</span>
+
+    </label>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="student@kkumail.com">
+
+    <!-- Full Name -->
+
+    <label>
+
+        ชื่อ-สกุล <span>*</span>
+
+    </label>
+
+    <input
+        type="text"
+        id="fullName"
+        placeholder="นางสาวโคล่า ซ่าสดชื่น">
+
+    <!-- Student ID -->
+
+    <label>
+
+        รหัสนักศึกษา <span>*</span>
+
+    </label>
+
+    <input
+        type="text"
+        id="studentId"
+        maxlength="11"
+        placeholder="613280xxx-x">
+
+    <!-- Issue Type -->
+
+    <label>
+
+        ประเภทปัญหา <span>*</span>
+
+    </label>
+
+    <select id="issueType">
+
+        <option value="">
+
+            กรุณาเลือกประเภทปัญหา
+
+        </option>
+
+        <option>
+
+            เช็คชื่อไม่ได้
+
+        </option>
+
+        <option>
+
+            ตรวจสอบคะแนน
+
+        </option>
+
+        <option>
+
+            อัปโหลดรูปภาพไม่ได้
+
+        </option>
+
+        <option>
+
+            ระบบขัดข้อง
+
+        </option>
+
+        <option>
+
+            อื่น ๆ
+
+        </option>
+
+    </select>
+
+    <!-- Description -->
+
+    <label>
+
+        รายละเอียดปัญหา
+
+    </label>
+
+    <textarea
+        id="description"
+        rows="5"
+        placeholder="กรุณาระบุรายละเอียดเพิ่มเติม (ไม่บังคับ)"></textarea>
+
+    <!-- Upload -->
+
+    <label>
+
+        แนบรูปภาพ
+
+    </label>
+
+    <label class="upload-box">
+
+        <input
+            type="file"
+            id="photo"
+            accept="image/*">
+
+        <span id="uploadText">
+
+            📷 เลือกรูปภาพ
+
+        </span>
+
+    </label>
+
+    <p class="upload-note">
+
+        หากมีรูปภาพประกอบ จะช่วยให้ผู้ดูแลระบบตรวจสอบได้รวดเร็วยิ่งขึ้น
+
+    </p>
+
+    <!-- Submit -->
+
+    <button
+        id="submitReport"
+        class="green-btn">
+
+        ส่งข้อมูล
+
+    </button>
+
+</section>
+
+    <!-- ================= STATUS FORM ================= -->
+
+<section
+    class="status-form"
+    id="statusForm">
+
+    <!-- Email -->
+
+    <label>
+
+        Email <span>*</span>
+
+    </label>
+
+    <input
+        type="email"
+        id="statusEmail"
+        placeholder="student@kkumail.com">
+
+    <!-- Student ID -->
+
+    <label>
+
+        รหัสนักศึกษา <span>*</span>
+
+    </label>
+
+    <input
+        type="text"
+        id="statusStudentId"
+        maxlength="11"
+        placeholder="613280xxx-x">
+
+    <!-- Button -->
+
+    <button
+        id="checkStatus"
+        class="green-btn">
+
+        ตรวจสอบสถานะ
+
+    </button
+        
+</section>
+
     <footer>
 
         By Pichitra K.
 
     </footer>
+
+</div>
+
+    <!-- ================= POPUP ================= -->
+
+<div
+    class="popup"
+    id="popup">
+
+    <div class="popup-content">
+
+        <img
+            id="popupImage"
+            src="images/SUCCESS.JPG"
+            alt="Popup">
+
+        <h2
+            id="popupTitle">
+
+        </h2>
+
+        <p
+            id="popupMessage">
+
+        </p>
+
+        <button
+            id="popupButton">
+
+            ปิด
+
+        </button>
+
+    </div>
 
 </div>
 
