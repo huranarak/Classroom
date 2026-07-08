@@ -104,6 +104,124 @@
 
     </section>
 
+    <!-- ================= RESULT ================= -->
+
+<section
+    class="result-page"
+    id="resultPage">
+
+    <!-- ================= STUDENT ================= -->
+
+    <div class="student-card">
+
+        <h3 id="studentName">
+
+            นาย สมชาย ใจดี
+
+        </h3>
+
+        <p id="studentIdShow">
+
+            613280123-4
+
+        </p>
+
+    </div>
+
+    <!-- ================= SCORE ================= -->
+
+    <div class="score-card">
+
+        <div class="score-row">
+
+            <label>
+
+                คะแนนเก็บ
+
+            </label>
+
+            <div class="score-box" id="attendanceScore">
+
+                28 / 30
+
+            </div>
+
+        </div>
+
+        <div class="score-row">
+
+            <label>
+
+                คะแนนสอบ
+
+            </label>
+
+            <div class="score-box" id="examScore">
+
+                56 / 70
+
+            </div>
+
+        </div>
+
+        <div class="score-row">
+
+            <label>
+
+                คะแนนรวม
+
+            </label>
+
+            <div class="score-box" id="totalScore">
+
+                84 / 100
+
+            </div>
+
+        </div>
+
+        <div class="score-row">
+
+            <label>
+
+                เกรด
+
+            </label>
+
+            <div class="score-box grade-box" id="grade">
+
+                A
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= BUTTON ================= -->
+
+    <div class="result-buttons">
+
+        <button
+            class="gray-btn"
+            id="reviewScore">
+
+            ตรวจสอบคะแนน
+
+        </button>
+
+        <button
+            class="green-btn"
+            id="finishScore">
+
+            ตกลง
+
+        </button>
+
+    </div>
+
+</section>
+
     <!-- ================= BUTTON ================= -->
 
     <button
@@ -124,8 +242,187 @@
 
 </div>
 
+
+    <!-- ================= ERROR POPUP ================= -->
+
+<div
+    class="popup"
+    id="popup">
+
+    <div class="popup-content">
+
+        <img
+
+            id="popupImage"
+
+            src="images/ERROR.JPG"
+
+            alt="Error">
+
+        <h2
+
+            id="popupTitle">
+
+            กรุณากรอกข้อมูลให้ถูกต้อง
+
+        </h2>
+
+        <p
+
+            id="popupMessage">
+
+            กรุณาตรวจสอบอีเมลและรหัสนักศึกษาอีกครั้ง
+
+        </p>
+
+        <div class="popup-buttons">
+
+            <button
+
+                id="popupButton">
+
+                ตกลง
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    
 <script src="score.js"></script>
 
 </body>
 
 </html>
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.popup-content{
+
+    width:90%;
+
+    max-width:360px;
+
+    background:#FFF;
+
+    border-radius:22px;
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.15);
+
+    animation:popup .25s ease;
+
+}
+
+.popup-content img{
+
+    width:120px;
+
+    display:block;
+
+    margin:0 auto 18px;
+
+}
+
+.popup-content h2{
+
+    font-size:23px;
+
+    font-weight:700;
+
+    color:#000;
+
+    margin-bottom:10px;
+
+}
+
+.popup-content p{
+
+    color:#666;
+
+    line-height:24px;
+
+    font-size:15px;
+
+}
+
+.popup-buttons{
+
+    margin-top:22px;
+
+}
+
+#popupButton{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#4CAF50;
+
+    color:#FFF;
+
+    padding:14px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#popupButton:hover{
+
+    background:#43A047;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
