@@ -1,10 +1,4 @@
 /* ==========================================
-   GOOGLE FONT
-========================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
-
-/* ==========================================
    RESET
 ========================================== */
 
@@ -12,7 +6,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Prompt',sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 /* ==========================================
@@ -20,225 +14,251 @@
 ========================================== */
 
 body{
-    background:#f8f5ef;
-    color:#222;
-    min-height:100vh;
-}
 
-/* ==========================================
-   CONTAINER
-========================================== */
-
-.container{
-    width:100%;
-    max-width:650px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-/* ==========================================
-   HEADER
-========================================== */
-
-.header{
-    background:linear-gradient(135deg,#f9d86d,#f7c948);
-    border-radius:28px;
-    padding:35px 20px;
-    text-align:center;
-    margin-bottom:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.header h1{
-    font-size:58px;
-    font-weight:700;
+    background:#F8F6F0;
     color:#000;
-    margin-bottom:8px;
-}
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
 
-.header h2{
-    font-size:28px;
-    font-weight:600;
-}
-
-/* ==========================================
-   CARD
-========================================== */
-
-.card{
-    background:#fff;
-    border-radius:25px;
-    padding:35px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 /* ==========================================
-   LABEL
+   PAGE
 ========================================== */
 
-label{
-    display:block;
-    margin-top:20px;
-    margin-bottom:8px;
-    font-size:20px;
-    font-weight:600;
-}
+.page{
 
-.required{
-    color:#e53935;
-}
-
-/* ==========================================
-   INPUT
-========================================== */
-
-input,
-select,
-textarea{
     width:100%;
-    padding:18px 20px;
-    border:2px solid #ececec;
-    border-radius:18px;
-    font-size:18px;
-    transition:.25s;
-    background:#fafafa;
-}
+    max-width:430px;
+    min-height:100vh;
 
-input:focus,
-select:focus,
-textarea:focus{
-    outline:none;
-    border-color:#f7c948;
-    background:#fff;
-}
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-textarea{
-    min-height:180px;
-    resize:vertical;
+    padding:30px 20px;
+
 }
 
 /* ==========================================
-   FILE
+   TOP HEADER
 ========================================== */
 
-input[type=file]{
-    padding:12px;
+.top-header{
+
+    width:100%;
+    text-align:center;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.cola-logo{
+
+    width:165px;
+    display:block;
+    margin:0 auto;
+
+}
+
+/* ==========================================
+   WELCOME
+========================================== */
+
+.welcome-section{
+
+    width:100%;
+    text-align:center;
+
+}
+
+.welcome-title{
+
+    margin-top:210px;
+
+    font-size:38px;
+
+    line-height:46px;
+
+    font-weight:700;
+
+    color:#000;
+
+}
+
+/* ==========================================
+   TEACHER
+========================================== */
+
+.teacher-name{
+
+    margin-top:14px;
+
+    font-size:14px;
+
+    color:#666;
+
+    font-weight:400;
+
+}
+
+/* ==========================================
+   COURSE
+========================================== */
+
+.course-section{
+
+    margin-top:22px;
+
+    text-align:center;
+
+}
+
+.course-name{
+
+    font-size:15px;
+
+    line-height:22px;
+
+    color:#444;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   MENU CARD
+========================================== */
+
+.menu-card{
+
+    width:100%;
+    max-width:340px;
+
+    margin-top:60px;
+
     background:#fff;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
 }
 
 /* ==========================================
    BUTTON
 ========================================== */
 
-button{
+.btn{
+
     width:100%;
-    margin-top:35px;
+
     border:none;
-    border-radius:18px;
-    padding:18px;
-    font-size:22px;
+
+    border-radius:15px;
+
+    padding:16px;
+
+    margin-top:12px;
+
+    font-size:18px;
+
     font-weight:700;
+
     cursor:pointer;
-    color:#fff;
-    background:#3ea65c;
+
     transition:.25s;
+
+    color:#000;
+
 }
 
-button:hover{
+/* ปุ่มแรก */
+
+.btn:first-child{
+
+    margin-top:0;
+
+}
+
+.btn:hover{
+
     transform:translateY(-2px);
-    background:#2f8b49;
+
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   COLORS
+========================================== */
+
+.btn-orange{
+
+    background:#FFD34A;
+
+}
+
+.btn-yellow{
+
+    background:#FF964A;
+
+}
+
+.btn-gray{
+
+    background:#D9D9D9;
+
+}
+
+.btn,
+.btn *{
+
+    color:#000 !important;
+
 }
 
 /* ==========================================
    FOOTER
 ========================================== */
 
-.footer{
+footer{
+
+    margin-top:22px;
+
     text-align:center;
-    margin:30px 0;
+
+    font-size:13px;
+
     color:#777;
-    font-size:18px;
+
 }
 
 /* ==========================================
-   POPUP
+   LINK
 ========================================== */
 
-.popup{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.45);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
+a{
+
+    color:inherit;
+    text-decoration:none;
+
 }
 
-.popup-content{
-    width:90%;
-    max-width:520px;
-    background:#fff;
-    border-radius:28px;
-    padding:40px 30px;
-    text-align:center;
-    animation:popup .25s ease;
+a:hover{
+
+    color:inherit;
+
 }
 
-.popup-content img{
-    width:170px;
-    margin-bottom:20px;
-}
+a:visited{
 
-.popup-content h2{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.popup-content p{
-    font-size:24px;
-    color:#666;
-    line-height:1.7;
-}
-
-.popup-buttons{
-    margin-top:35px;
-    display:flex;
-    gap:15px;
-}
-
-.popup-buttons button{
-    flex:1;
-    margin:0;
-}
-
-.report-btn{
-    background:#6cc16d;
-}
-
-.ok-btn{
-    background:#6cc16d;
-}
-
-.report-btn:hover,
-.ok-btn:hover{
-    background:#4fa858;
-}
-
-@keyframes popup{
-
-    from{
-
-        transform:scale(.8);
-        opacity:0;
-
-    }
-
-    to{
-
-        transform:scale(1);
-        opacity:1;
-
-    }
+    color:inherit;
 
 }
 
@@ -246,81 +266,57 @@ button:hover{
    MOBILE
 ========================================== */
 
-@media(max-width:768px){
+@media (max-width:480px){
 
-    .container{
+    .page{
 
-        margin:20px auto;
-
-    }
-
-    .header{
-
-        padding:28px 15px;
+        padding:24px 18px;
 
     }
 
-    .header h1{
+    .cola-logo{
 
-        font-size:48px;
-
-    }
-
-    .header h2{
-
-        font-size:22px;
+        width:150px;
 
     }
 
-    .card{
+    .welcome-title{
 
-        padding:25px;
-
-    }
-
-    label{
-
-        font-size:18px;
-
-    }
-
-    input,
-    select,
-    textarea{
-
-        font-size:17px;
-
-        padding:16px;
-
-    }
-
-    button{
-
-        font-size:20px;
-
-    }
-
-    .popup-content{
-
-        padding:30px 20px;
-
-    }
-
-    .popup-content img{
-
-        width:140px;
-
-    }
-
-    .popup-content h2{
+        margin-top:190px;
 
         font-size:34px;
 
+        line-height:42px;
+
     }
 
-    .popup-content p{
+    .teacher-name{
 
-        font-size:20px;
+        font-size:13px;
+
+    }
+
+    .course-name{
+
+        font-size:14px;
+
+    }
+
+    .menu-card{
+
+        width:100%;
+
+        max-width:360px;
+
+        margin-top:55px;
+
+    }
+
+    .btn{
+
+        font-size:17px;
+
+        padding:15px;
 
     }
 
