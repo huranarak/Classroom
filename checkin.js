@@ -18,26 +18,21 @@ let longitude = null;
 
 window.onload = function(){
 
-    document
-    .getElementById("locationPopup")
-    .style.display = "flex";
+    // แสดง Popup ขออนุญาตตำแหน่ง
+    document.getElementById("locationPopup").style.display = "flex";
 
-    document
-    .getElementById("photo")
-    .addEventListener("change",function(){
+    // เลือกรูป
+    document.getElementById("photo").addEventListener("change",function(){
 
-        const text =
-        document.getElementById("uploadText");
+        const text = document.getElementById("uploadText");
 
-        if(this.files.length>0){
+        if(this.files.length > 0){
 
-            text.innerHTML =
-            "✅ " + this.files[0].name;
+            text.innerHTML = "✅ " + this.files[0].name;
 
         }else{
 
-            text.innerHTML =
-            "📷 เลือกรูปภาพ";
+            text.innerHTML = "📷 เลือกรูปภาพ";
 
         }
 
@@ -45,31 +40,23 @@ window.onload = function(){
 
     });
 
-    document
-    .getElementById("allowLocation")
-    .onclick = function(){
+    // ปุ่มอนุญาต
+    document.getElementById("allowLocation").addEventListener("click",function(){
 
-        document
-        .getElementById("locationPopup")
-        .style.display = "none";
+        document.getElementById("locationPopup").style.display = "none";
 
         requestLocation();
 
-    };
+    });
 
-    document
-    .getElementById("cancelLocation")
-    .onclick = function(){
+    // ปุ่มยกเลิก
+    document.getElementById("cancelLocation").addEventListener("click",function(){
 
-        document
-        .getElementById("locationPopup")
-        .style.display = "none";
+        document.getElementById("locationPopup").style.display = "none";
 
-    };
+    });
 
     setupStudentId();
-
-    setupButton();
 
     watchForm();
 
